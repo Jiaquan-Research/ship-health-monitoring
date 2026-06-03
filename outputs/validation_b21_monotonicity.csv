@@ -1,0 +1,5 @@
+Target,Strict AbsMean,Relaxed AbsMean,Strict RMS,Relaxed RMS,Strict P95,Relaxed P95
+CHL_POW_1,True,True,True,True,True,True
+CHL_SW_TEMP_1,True,True,True,True,True,True
+CT_SW_TEMP_1,True,True,True,True,True,True
+CHL_RWCD_TEMP_1,True,True,True,True,True,True

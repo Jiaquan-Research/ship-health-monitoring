@@ -109,3 +109,23 @@ A simple HI_v0 is not justified from this B2 result alone.
 Next action:
 
 Audit the physical meaning of fouling severity labels and confirm whether lower fouling factor values represent more severe degradation before redesigning HI_v0.
+
+## Validation B2.1 Result
+
+Status:
+
+PASS - Strong PASS
+
+Corrected severity ordering:
+
+Baseline -> 095 -> 080 -> 065
+
+Key findings:
+
+- B2 diagnosis showed 095 is weakest fouling, 080 is moderate fouling, and 065 is strongest fouling.
+- Frozen Validation B1 Expected State Models were reused without retraining.
+- All 4 targets showed strict monotonicity for AbsMean, RMS, and P95 under corrected ordering.
+- Most sensitive target: `CT_SW_TEMP_1`.
+- Sensitivity ranking: `CT_SW_TEMP_1`, `CHL_RWCD_TEMP_1`, `CHL_SW_TEMP_1`, `CHL_POW_1`.
+- Expected State -> Residual -> Physical Degradation is preliminarily supported for LBNL cooling-tower fouling.
+- Q2 of the Concept Paper can be marked Preliminary Supported with the caveat that evidence is HVAC-domain and label-order dependent.
