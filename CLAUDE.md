@@ -87,3 +87,25 @@ Use:
 Question:
 
 Does residual magnitude increase monotonically with fault severity?
+
+## Validation B2 Result
+
+Status:
+
+FAIL
+
+Key findings:
+
+- Frozen Validation B1 Expected State Models were applied without retraining.
+- Cooling-tower fouling residuals did not increase monotonically under the requested Baseline -> 065 -> 080 -> 095 ordering.
+- No target passed strict or relaxed monotonicity using AbsMean, RMS, or P95.
+- `CT_SW_TEMP_1` had the strongest sensitivity score, but the response was not monotonic.
+- The tested residual metrics do not yet support Expected State -> Residual -> Degradation for this fault family.
+
+Implication:
+
+A simple HI_v0 is not justified from this B2 result alone.
+
+Next action:
+
+Audit the physical meaning of fouling severity labels and confirm whether lower fouling factor values represent more severe degradation before redesigning HI_v0.
