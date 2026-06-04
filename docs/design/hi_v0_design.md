@@ -242,6 +242,16 @@ from B2.1, the Rolling RMS formulation should be reconsidered.
 
 HI_v0 must add value over the B2.1 baseline.
 
+The validation must explicitly compare raw residual RMS
+
+against HI_v0 Rolling RMS.
+
+If HI_v0 does not provide more stable monotonicity
+
+and lower baseline exceedance, it cannot be treated
+
+as an improvement over raw residual metrics.
+
 ---
 
 ## 7. What HI_v0 Is NOT
