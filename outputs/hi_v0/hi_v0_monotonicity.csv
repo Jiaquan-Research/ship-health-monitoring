@@ -1,0 +1,17 @@
+Target,Window,Strict_Mean,Strict_P95,Strict_HIz
+CT_SW_TEMP_1,6h,True,True,True
+CT_SW_TEMP_1,12h,True,True,True
+CT_SW_TEMP_1,24h,True,True,True
+CT_SW_TEMP_1,48h,True,True,True
+CHL_SW_TEMP_1,6h,True,True,True
+CHL_SW_TEMP_1,12h,True,True,True
+CHL_SW_TEMP_1,24h,True,False,True
+CHL_SW_TEMP_1,48h,True,True,True
+CHL_RWCD_TEMP_1,6h,True,True,True
+CHL_RWCD_TEMP_1,12h,True,True,True
+CHL_RWCD_TEMP_1,24h,True,True,True
+CHL_RWCD_TEMP_1,48h,True,True,True
+CHL_POW_1,6h,True,True,True
+CHL_POW_1,12h,True,True,True
+CHL_POW_1,24h,True,True,True
+CHL_POW_1,48h,True,True,True

@@ -129,3 +129,30 @@ Key findings:
 - Sensitivity ranking: `CT_SW_TEMP_1`, `CHL_RWCD_TEMP_1`, `CHL_SW_TEMP_1`, `CHL_POW_1`.
 - Expected State -> Residual -> Physical Degradation is preliminarily supported for LBNL cooling-tower fouling.
 - Q2 of the Concept Paper can be marked Preliminary Supported with the caveat that evidence is HVAC-domain and label-order dependent.
+
+## HI_v0 Validation
+
+Status:
+
+PASS - Moderate PASS
+
+Best target:
+
+CT_SW_TEMP_1
+
+Best window:
+
+W = 6h
+
+Q3 status:
+
+Preliminary Supported
+
+Key findings:
+
+- HI_v0 was computed only from frozen B2.1 normalized residuals.
+- No residuals were recomputed and no Expected State Models were retrained.
+- HI_v0A (`CT_SW_TEMP_1`) showed the strongest sensitivity and clear monotonic response.
+- Primary 24h window showed monotonic HI_mean for all 4 targets.
+- HI_v0 improved sensitivity over raw residual RMS mainly for `CT_SW_TEMP_1`; broader improvement across all targets was not demonstrated.
+- Q3 is Preliminary Supported for HVAC-domain single-variable HI construction, with marine transfer still unvalidated.
