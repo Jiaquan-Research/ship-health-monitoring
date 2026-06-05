@@ -156,3 +156,31 @@ Key findings:
 - Primary 24h window showed monotonic HI_mean for all 4 targets.
 - HI_v0 improved sensitivity over raw residual RMS mainly for `CT_SW_TEMP_1`; broader improvement across all targets was not demonstrated.
 - Q3 is Preliminary Supported for HVAC-domain single-variable HI construction, with marine transfer still unvalidated.
+
+## Validation B4 Residual Trend Audit
+
+Status:
+
+PASS - Strong PASS
+
+Q4a status:
+
+Initial Evidence
+
+Best trend metric:
+
+RMS
+
+Targets with reliable trend:
+
+4/4
+
+Key findings:
+
+- B4 used frozen Validation B2.1 residuals only.
+- No residuals were recomputed and no Expected State Models were retrained.
+- Stage order: Baseline -> 095 -> 080 -> 065.
+- All 4 targets showed strict monotonicity for AbsMean, RMS, P95, P99, and Std.
+- Spearman rho = 1.0 for all target/metric combinations.
+- HI_v0 Rolling RMS 24h improved the CT_SW_TEMP_1 strongest-vs-baseline trend ratio over raw residual RMS.
+- Residual -> Trend exists in the HVAC pseudo-degradation path; Q4a can be marked Initial Evidence.
