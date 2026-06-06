@@ -184,3 +184,43 @@ Key findings:
 - Spearman rho = 1.0 for all target/metric combinations.
 - HI_v0 Rolling RMS 24h improved the CT_SW_TEMP_1 strongest-vs-baseline trend ratio over raw residual RMS.
 - Residual -> Trend exists in the HVAC pseudo-degradation path; Q4a can be marked Initial Evidence.
+
+---
+
+## Validation C0 Series — FROZEN (2026-06-06)
+
+### C0: N-CMAPSS Surrogate Spike
+Result: Weak Evidence (Ground Truth issue)
+Finding: HPC_eff_mod = 0 in DS02-006, Spearman undefined
+
+### C0.1: Label Audit
+Result: Diagnosis complete
+Finding: DS02-006 is HPT fault type. Use HPT_eff_mod.
+
+### C0.2: Ground Truth Aligned Rerun
+Result: STRONG PASS
+T50 Held-out R²: 0.992~0.996
+Residual |Spearman|: 0.772~0.826
+HI |Spearman|: 0.951~0.994
+HI B/A Ratio: 8.5~12.3x
+Best target: T50 (HPT outlet temp)
+Best window: W=5 cycles
+Early detection: ~20-29% lifecycle
+
+### Cross-Domain Evidence Status
+Q1: Strong Evidence (HVAC + Aero Engine)
+Q2: Strong Evidence (HVAC + Aero Engine)
+Q3: Moderate Evidence (HVAC + Aero Engine)
+Q4a: Initial Evidence
+Q4b: Open — Architecture Defined, awaiting Marine data
+
+### Explicitly NOT Current Priorities
+- Further N-CMAPSS experiments
+- HI_v1 implementation
+- RUL prediction
+- Deep learning models
+
+### Next Priority
+P1: Marine data acquisition (teaching vessel)
+P2: Baseline Management validation with real data
+P3: Validation D (Marine generator)
