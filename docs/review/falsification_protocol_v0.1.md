@@ -6,11 +6,15 @@ Status:
 
 Open
 
+Source:
+
+* claim_registry_v0.1.md
+* deep_research_attack_protocol_v0.1.md
+* attack_review_round1.md
+
 Purpose:
 
 Describe how each claim may fail.
-
-Failure is acceptable.
 
 Agreement is unnecessary.
 
@@ -18,21 +22,13 @@ Agreement is unnecessary.
 
 ## Evidence Strength Interpretation
 
-Strong Evidence
+Strong Evidence ≠ truth
 
-≠ truth
+Moderate Evidence ≠ truth
 
-Moderate Evidence
+Initial Evidence ≠ truth
 
-≠ truth
-
-Initial Evidence
-
-≠ truth
-
-Hypothesis
-
-≠ truth
+Hypothesis ≠ truth
 
 All claims remain falsifiable.
 
@@ -42,9 +38,36 @@ All claims remain falsifiable.
 
 Condition → Expected State
 
-Current strength:
+Current Strength:
 
 Moderate Evidence
+
+Current Confidence:
+
+Medium
+
+Reason:
+
+Cross-domain support exists,
+but controller-policy explanations have not been excluded.
+
+---
+
+Specific attack from Round 1 review:
+
+High R² may arise from controller policy learning
+rather than transferable physics.
+
+HVAC:
+
+* CWL_SEC_DPSPT nearly constant
+* CHL_STA_1 always = 1
+* single chronological 80/20 split on autocorrelated series
+
+N-CMAPSS:
+
+* per-unit training
+* no cross-unit transfer test
 
 ---
 
@@ -68,11 +91,15 @@ or
 
 No stable Condition Variables exist.
 
+or
+
+Cross-unit transfer fails systematically.
+
 ---
 
 Interpretation:
 
-C1 Marine transfer fails.
+Marine transfer of C1 fails.
 
 Non-Marine evidence remains valid.
 
@@ -88,40 +115,56 @@ Downgrade C1.
 
 Expected State → Residual
 
-Current strength:
+Current Strength:
 
-Initial Evidence
+Moderate Evidence
+
+Current Confidence:
+
+Low-Medium
+
+Reason:
+
+B2.1 contains post-hoc ordering risk.
+
+---
+
+Specific attack from Round 1 review:
+
+B2 initially FAIL.
+
+B2.1 PASS only after severity ordering changed.
+
+Order:
+
+095 → 080 → 065
+
+was inferred from observed data patterns,
+not pre-registered from simulator metadata.
 
 ---
 
 Potential weakness:
 
-Post-hoc severity ordering risk.
+Residual separation may depend on
+post-hoc label interpretation.
 
 ---
 
 Falsification criterion:
 
-Residual cannot separate:
-
-healthy
-
-vs
-
-degraded
-
-when external severity semantics are known.
+Residual cannot separate healthy and degraded states
+when external severity semantics are independently known.
 
 or
 
-Residual separation disappears under
-independent datasets.
+Residual separation disappears on independent datasets.
 
 ---
 
 Interpretation:
 
-C2 weakened.
+C2 weakened or rejected.
 
 ---
 
@@ -135,15 +178,37 @@ Downgrade or reject C2.
 
 Residual → HI
 
-Current strength:
+Current Strength:
 
 Initial Evidence
+
+Current Confidence:
+
+Low
+
+Reason:
+
+Comparator family not explored.
+
+---
+
+Specific attack from Round 1 review:
+
+Internal contradiction:
+
+Only 1 of 4 targets showed clear HI improvement.
+
+Project's own 3/4 criterion was not satisfied.
+
+Baseline P95 threshold was computed from
+the same series used for evaluation,
+creating a potentially tautological false-positive check.
 
 ---
 
 Potential weakness:
 
-HI_v0 may simply smooth noise.
+Rolling RMS may simply smooth noise.
 
 ---
 
@@ -157,16 +222,11 @@ Missing comparators:
 
 Falsification criterion:
 
-HI correlation
-
-≤
-
-Residual correlation
+HI correlation ≤ residual correlation
 
 or
 
-Alternative HI forms consistently outperform
-Rolling RMS.
+Alternative HI forms consistently outperform Rolling RMS.
 
 ---
 
@@ -188,9 +248,17 @@ Replace HI_v0.
 
 Residual → Trend
 
-Current strength:
+Current Strength:
 
 Initial Evidence
+
+Current Confidence:
+
+Low
+
+Reason:
+
+Pseudo-degradation only.
 
 ---
 
@@ -208,11 +276,8 @@ Falsification criterion:
 
 Long-term Marine data shows:
 
-No trend
-
-or
-
-Trend direction unstable.
+* no trend
+* unstable trend direction
 
 ---
 
@@ -232,21 +297,29 @@ Restrict trend interpretation.
 
 Baseline Management
 
-Current strength:
+Current Strength:
 
 Hypothesis
+
+Current Confidence:
+
+Very Low
+
+Reason:
+
+No maintenance-event evidence exists.
 
 ---
 
 Potential weakness:
 
-Maintenance effects are:
+Maintenance effects may be:
 
 * partial
 * overlapping
 * gradual
 
-No clear re-stationarization exists.
+Re-stationarization may never occur.
 
 ---
 
@@ -254,7 +327,7 @@ Falsification criterion:
 
 After maintenance:
 
-Residual does not re-stationarize.
+Residual fails to re-stationarize.
 
 or
 
@@ -280,7 +353,7 @@ C1 failure
 
 ↓
 
-Re-evaluate C2–C5.
+Re-evaluate C2–C5
 
 ---
 
@@ -288,7 +361,7 @@ C2 failure
 
 ↓
 
-Re-evaluate C3–C5.
+Re-evaluate C3–C5
 
 ---
 
@@ -296,7 +369,7 @@ C3 failure
 
 ↓
 
-Replace HI.
+Replace HI
 
 ---
 
@@ -304,7 +377,7 @@ C4 failure
 
 ↓
 
-Trend interpretation restricted.
+Restrict trend interpretation
 
 ---
 
@@ -312,16 +385,14 @@ C5 failure
 
 ↓
 
-Baseline Management redesign.
+Redesign Baseline Management
 
-Q1–Q4a remain independent.
+Q1–Q4a remain independent
 
 ---
 
 # Philosophy
 
-The purpose of this document is not to
-protect the claims.
+The purpose of this document is not to protect claims.
 
-The purpose is to make the claims easier
-to disprove.
+The purpose is to make claims easier to disprove.
