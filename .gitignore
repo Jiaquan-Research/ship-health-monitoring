@@ -55,6 +55,7 @@ data/
 
 # Large generated residual exports removed from public git history.
 # Small report CSV files under outputs/ remain allowed by default.
+outputs/residuals_*.csv
 outputs/validation_b2_residuals.csv
 outputs/validation_b21_residuals.csv
 
