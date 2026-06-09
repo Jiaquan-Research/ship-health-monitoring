@@ -1,0 +1,5 @@
+Sampling,B1 Pass,B2.1 RMS Monotonic Pass,Min Retention Ratio,Overall Pass
+1min,True,True,1.0,True
+15min,True,True,0.7213172571264249,False
+1h,True,True,1.748451497557653,True
+2h,True,False,1.737056275706164,False

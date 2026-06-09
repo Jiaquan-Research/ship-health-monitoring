@@ -31,6 +31,10 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
+# Python bytecode/cache
+**/__pycache__/
+*.pyc
+
 # Test and coverage
 .pytest_cache/
 .coverage
@@ -44,3 +48,16 @@ Thumbs.db
 
 # Project data
 data/
+
+# Large raw dataset artifacts
+*.h5
+*.zip
+
+# Large generated residual exports removed from public git history.
+# Small report CSV files under outputs/ remain allowed by default.
+outputs/validation_b2_residuals.csv
+outputs/validation_b21_residuals.csv
+
+# Duplicate Word exports kept locally; canonical tracked file is outputs/claim_registry_v0.1.docx.
+docs/claim_registry_v0.1_1.docx
+outputs/claim_registry_v0.1_1.docx
