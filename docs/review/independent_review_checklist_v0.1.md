@@ -59,6 +59,22 @@ Main concerns:
 * Controller-dominated dynamics
 * Other
 
+### Evidence Source
+
+HVAC Validation B1
+
+R²≈0.97
+
+N-CMAPSS C0.2
+
+R²≈0.99
+
+Scope:
+
+HVAC and Aero-engine simulation only.
+
+Marine transfer remains unvalidated.
+
 Comments:
 
 ---
@@ -87,6 +103,22 @@ Main concerns:
 * Label semantics
 * Sensor selection bias
 * Other
+
+### Evidence Source
+
+HVAC B2.1
+
+Residual severity ordering
+
+N-CMAPSS C0.2
+
+Residual vs HPT_eff_mod
+
+Scope:
+
+Dependent on label semantics.
+
+Marine evidence unavailable.
 
 Comments:
 
@@ -117,6 +149,20 @@ Main concerns:
 * Internal inconsistency
 * Other
 
+### Evidence Source
+
+HI_v0
+
+HVAC
+
+N-CMAPSS C0.2
+
+Current status:
+
+Initial Evidence
+
+Comparator family not yet explored.
+
 Comments:
 
 ---
@@ -144,6 +190,18 @@ Main concerns:
 * Pseudo-degradation
 * Lack of real temporal evidence
 * Other
+
+### Evidence Source
+
+HVAC B4
+
+Pseudo-degradation path
+
+Current status:
+
+Initial Evidence
+
+No real temporal degradation evidence.
 
 Comments:
 
@@ -173,6 +231,18 @@ Main concerns:
 * Re-stationarization assumptions
 * Maintenance semantics
 * Other
+
+### Evidence Source
+
+baseline_management_v0.2
+
+Cross-industry literature review
+
+Current status:
+
+Hypothesis
+
+No maintenance-event evidence.
 
 Comments:
 
@@ -227,6 +297,28 @@ Reason:
 # Section 5 — Suggested Experiments
 
 What experiment would you run first to challenge the project?
+
+Example directions
+
+Possible review experiments:
+
+* Test Expected State model on Marine generator data.
+
+* Verify B2 severity ordering using external metadata.
+
+* Compare HI_v0 with:
+
+  EWMA
+
+  CUSUM
+
+  Trend slope
+
+* Examine maintenance events and re-stationarization.
+
+These examples are suggestions only.
+
+Reviewers are free to propose different experiments.
 
 ---
 
