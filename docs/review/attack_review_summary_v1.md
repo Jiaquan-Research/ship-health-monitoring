@@ -171,6 +171,15 @@ Initial Evidence
 
 These remain provisional.
 
+Note: C1 and C2 evidence comes entirely from
+simulation data (LBNL EnergyPlus-Modelica co-simulation
+and N-CMAPSS NASA simulation). Neither dataset
+represents a real machine under real operating conditions.
+"Moderate Evidence" in this context means:
+pipeline mechanics behave as expected on two simulators.
+It does not imply that real-world transfer is likely
+or that the evidence level would survive on real machinery.
+
 Marine validation has not yet occurred.
 
 ---
@@ -248,6 +257,22 @@ on healthy trajectories?
 This question has not yet been tested.
 
 A negative-control protocol is required.
+
+Specifically: apply the frozen Expected State model
+to healthy-only data with known operating-condition
+variation and no fault injection.
+If residual or HI shows an upward trend during
+confirmed healthy periods, this indicates that
+condition normalization is incomplete and that
+operating-condition variation is leaking into
+the residual signal.
+If this test fails, the entire chain from
+Residual → HI → Trend is contaminated at the source,
+and no downstream validation (including Validation D)
+will be interpretable until condition normalization
+is fixed.
+This is the single test that must be run
+before any further validation work.
 
 ---
 
