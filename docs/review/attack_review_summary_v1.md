@@ -137,7 +137,169 @@ Strong cross-domain evidence.
 
 ---
 
-## 5. Surviving Structure
+## 5. Internal Validation Sequence
+
+Timeline:
+
+I-1
+
+↓
+
+M-1
+
+↓
+
+M-1A
+
+↓
+
+E-1
+
+---
+
+## I-1 Negative Control
+
+Result:
+
+FAIL
+
+Main finding:
+
+Healthy trajectories exhibited apparent trends.
+
+Strong correlation with:
+
+OA_TEMP
+
+CWL_SEC_LOAD
+
+Interpretation:
+
+Likely condition leakage rather than genuine degradation trend.
+
+No claim upgrades.
+
+---
+
+## M-1 Condition Leakage Audit
+
+Result:
+
+FAIL
+
+Main finding:
+
+Strong condition dependence remains.
+
+Random Forest:
+
+Residual RMS ~ Conditions
+
+R² ≈ 0.379
+
+HI_v0 ~ Conditions
+
+R² ≈ 0.645
+
+Interpretation:
+
+Residual and HI still contain condition information.
+
+Type D not considered primary.
+
+---
+
+## M-1A Type Separation
+
+Result:
+
+Type C dominant.
+
+Type B moderate.
+
+Type A not supported.
+
+Type D not primary.
+
+Interpretation:
+
+Cross-regime instability appears to be the major source of leakage.
+
+No remediation performed.
+
+No conclusions upgraded.
+
+---
+
+## Exploratory E-1
+
+Status:
+
+Exploratory only.
+
+Not a validation.
+
+Not evidence.
+
+Result:
+
+No obvious instability observed.
+
+N-CMAPSS same-window:
+
+R² ≈ 0.9988
+
+Cross-window:
+
+R² ≈ 0.9161
+
+Interpretation:
+
+Performance degradation exists but HVAC-style collapse was not observed.
+
+No universality implied.
+
+---
+
+## Emergence of Q0
+
+A new exploratory question appeared:
+
+Global Mapping ?
+
+vs
+
+Piecewise Mapping ?
+
+Q0 is not part of the Claim Registry.
+
+Q0 is not supported by evidence.
+
+Q0 should remain speculative.
+
+---
+
+## Overall Status
+
+Current understanding:
+
+The original engineering pipeline remains alive.
+
+However,
+
+Expected State stability became the dominant unresolved problem.
+
+Current priority:
+
+Understand Type C.
+
+Validation D remains blocked.
+
+No claim upgrades are justified.
+
+---
+
+## 6. Surviving Structure
 
 Current structure surviving all reviews:
 
@@ -184,7 +346,7 @@ Marine validation has not yet occurred.
 
 ---
 
-## 6. Open Problems
+## 7. Open Problems
 
 ### OP-1
 
@@ -228,7 +390,7 @@ Will the pipeline survive real machinery?
 
 ---
 
-## 7. Current Project Status
+## 8. Current Project Status
 
 Current understanding:
 
@@ -247,7 +409,7 @@ Current status is NOT:
 
 ---
 
-## 8. Highest-Priority Next Question
+## 9. Highest-Priority Next Question
 
 Q:
 
@@ -276,7 +438,7 @@ before any further validation work.
 
 ---
 
-## 9. Philosophy
+## 10. Philosophy
 
 Every PASS should correspond to
 a test that could genuinely FAIL.
