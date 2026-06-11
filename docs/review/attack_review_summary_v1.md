@@ -409,32 +409,38 @@ Current status is NOT:
 
 ---
 
-## 9. Highest-Priority Next Question
+## 9. Current Highest-Priority Question
 
-Q:
+I-1 (Negative Control) and M-1 (Condition Leakage Audit)
+have both been executed and returned FAIL.
+M-1A (Type Separation) identified Type C
+(cross-regime instability) as the dominant mechanism.
 
-Can residual and HI remain stable
-on healthy trajectories?
+Executed sequence:
 
-This question has not yet been tested.
+I-1 FAIL -> M-1 FAIL -> M-1A: Type C dominant -> E-1: no collapse on N-CMAPSS
 
-A negative-control protocol is required.
+Current unresolved question:
 
-Specifically: apply the frozen Expected State model
-to healthy-only data with known operating-condition
-variation and no fault injection.
-If residual or HI shows an upward trend during
-confirmed healthy periods, this indicates that
-condition normalization is incomplete and that
-operating-condition variation is leaking into
-the residual signal.
-If this test fails, the entire chain from
-Residual → HI → Trend is contaminated at the source,
-and no downstream validation (including Validation D)
-will be interpretable until condition normalization
-is fixed.
-This is the single test that must be run
-before any further validation work.
+Q0:
+
+Is the Expected State model fundamentally
+a Global Mapping or a Piecewise Mapping?
+
+This question emerged from M-1A findings.
+It remains exploratory with very low evidence.
+It is NOT part of the Claim Registry.
+It is NOT a validated claim.
+It is an observation-driven research question only.
+
+Current priority:
+
+Understand Type C through Dataset Zoo observation.
+
+Validation D remains blocked until
+Expected State stability is resolved.
+
+No claim upgrades are justified at this stage.
 
 ---
 
@@ -459,3 +465,12 @@ v1
 2026-06-10
 
 Initial convergence summary.
+
+v1.1
+
+2026-06-11
+
+Section 9 updated to reflect I-1/M-1/M-1A/E-1
+execution results. Q0 documented as exploratory
+question. Current priority updated to Dataset Zoo
+observation for Type C understanding.
