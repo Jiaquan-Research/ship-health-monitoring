@@ -59,11 +59,12 @@ Current evidence inventory for Q0:
 |---------|-------------|---------------------|
 | HVAC | Cross-season collapse (M-1A) | Yes — 1 observation |
 | N-CMAPSS | No obvious instability (E-1) | Yes — 1 observation |
-| Battery (NASA/Oxford) | E-2 results diverge, but audited as non-comparable | **No** — see Section 3 |
+| Battery (NASA/Oxford) | E-2 results diverge, but audited as non-comparable | **Suspended** — see Section 4 |
 
 Q0 evidence count after this review: HVAC ×1, N-CMAPSS ×1.
-Battery does not currently contribute. See Section 3 for
-the reasoning and the path back in.
+Battery's contribution is suspended pending E-2 redesign,
+not removed. See Section 4 for the reasoning and the path
+back in.
 
 ---
 
@@ -140,8 +141,9 @@ requiring resolution via new theory or new questions.
 
 **Disposition:**
 
-Battery (NASA and Oxford) is removed from the Q0 evidence
-inventory effective this review. It is marked:
+Battery (NASA and Oxford)'s contribution to the Q0
+evidence inventory is suspended pending redesign,
+effective this review. It is marked:
 
 > "E-2 needs redesign before Battery can contribute to Q0."
 
@@ -168,10 +170,13 @@ for Battery's re-entry into the Q0 inventory.
 
 None identified this period.
 
-Note: "Battery removed from Q0 inventory" (Section 4) is
-NOT a dead end. It is a redesign requirement. The
-datasets remain in the Dataset Zoo; only their current
-contribution to Q0 is paused.
+Note: "Battery contribution to Q0 suspended" (Section 4)
+is NOT a dead end. The context-audit absorption of the
+E-2 divergence is itself a successful outcome — it
+resolved an apparent contradiction without requiring new
+theory or new questions. The datasets remain in the
+Dataset Zoo; only their current contribution to Q0 is
+paused pending redesign.
 
 ---
 
@@ -232,6 +237,33 @@ acted on, per the exploration discipline.
 
 ---
 
+## 7.5 Process Lessons
+
+This period's most significant outcome may not be any
+individual observation, but the fact that the exploration
+discipline itself was exercised end-to-end for the first
+time on a real divergence (E-2).
+
+1. The sequence Observation → Pause → Context Audit →
+   Comparability Check → Question Generation was exercised
+   successfully during the E-2 divergence (Section 4).
+
+2. An interesting or surprising result does not necessarily
+   deserve a new question. The E-2 divergence initially
+   looked like it might require new Q-numbers; a Context
+   Audit resolved it without any.
+
+3. A context audit can absorb an apparent contradiction
+   without requiring a new theory. "Two differently-posed
+   questions producing two different answers" is a complete
+   explanation in itself.
+
+4. Exploration line outputs themselves require periodic
+   review — this document is an instance of that, and is
+   itself subject to the same discipline (see Section 8).
+
+---
+
 ## 8. Carryover for Next Review
 
 Items to check at the next periodic review:
@@ -250,6 +282,9 @@ Items to check at the next periodic review:
   Pursued" — and if an item disappears from that list
   without becoming a tracked question, that itself should
   be noted (it would mean the discipline was not followed).
+- Has this Exploration Review itself remained useful, or
+  has it become unnecessary overhead? (The review process
+  is itself subject to audit, per Process Lesson 4.)
 
 ---
 
@@ -272,3 +307,8 @@ This review does not propose any change to the above.
 v1 — 2026-06-12 — First periodic exploration review.
 Covers I-1 through Battery Dataset Context Audit (P0).
 No prior review to carry over from.
+
+v1.1 — 2026-06-12 — Changed Battery disposition from
+"removed" to "suspended pending redesign" throughout;
+clarified Dead Ends section; added Process Lessons
+section (7.5); added self-review carryover item.
