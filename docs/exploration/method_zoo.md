@@ -139,6 +139,28 @@ Nothing in this document should be used to:
 
 ---
 
+## 9. Regime Detection Method Assumptions
+
+Source:
+
+Deep Research: Vocabulary for Multi-Regime Industrial Systems
+
+| Method family | Regime assumption | Number of regimes | Membership | Notes |
+|---|---|---|---|---|
+| HMM / Markov-switching models | Discrete latent regimes | Usually fixed or selected by model comparison | Latent | Temporal dependence assumed |
+| Mixture of Experts | Finite experts with soft gating | Selected beforehand | Soft / latent | Useful as a conceptual reference, not currently recommended |
+| Clustering-based identification | Finite partitions or soft clusters, depending on algorithm | May be fixed or inferred, depending on method | Inferred | Assumptions vary strongly by algorithm |
+| Change-point detection | Piecewise-stationary segments | May be estimated with penalties | Implicit by segment | Boundary-focused rather than reusable regime-state focused |
+| Gaussian Mixture Models | Finite mixture components | Set or selected | Latent via posterior responsibility | No temporal persistence unless extended |
+
+This section records assumptions only.
+
+It does not recommend any method.
+
+It does not change current method priorities.
+
+---
+
 ## Version History
 
 v0.1
@@ -148,4 +170,3 @@ v0.1
 Initial method observation ledger created.
 
 No conclusions.
-
