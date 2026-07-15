@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import AuthorityBanner from "../../../components/AuthorityBanner.astro";
+import SourceList from "../../../components/SourceList.astro";
+---
+
+<BaseLayout title="Evidence and Claim Boundaries" description="Claims, evidence, gaps, and boundaries." breadcrumbs={[{ label: "Projects", href: "/projects" }, { label: "Ship Health Monitoring", href: "/projects/ship-health-monitoring" }, { label: "Boundaries" }]}>
+  <PageHero eyebrow="Boundaries" title="Evidence and Claim Boundaries" summary="Frozen claims and active gaps must be read through the claim boundary, evidence map, and gap register." />
+  <AuthorityBanner ids={["MPV1-CLAIM-BOUNDARY", "MPV1-EVIDENCE-MAP", "MPV1-GAP-REGISTER"]} />
+  <section class="panel warning">
+    <h2>Boundary rule</h2>
+    <p>Website summaries must not strengthen support levels, close gaps, or imply Marine transfer beyond the frozen package.</p>
+  </section>
+  <SourceList ids={["MPV1-PACKAGE", "MPV1-ARTIFACT-INDEX"]} title="Related package records" />
+</BaseLayout>

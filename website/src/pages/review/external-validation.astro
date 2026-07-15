@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import AuthorityBanner from "../../components/AuthorityBanner.astro";
+import SourceList from "../../components/SourceList.astro";
+---
+
+<BaseLayout title="External Validation Review" description="External Validation human-reviewer mechanism." breadcrumbs={[{ label: "Review Portal", href: "/review" }, { label: "External Validation" }]}>
+  <PageHero eyebrow="Human external review" title="External Validation" summary="External Validation definition is approved and frozen, but execution has not started and no reviewer has been selected." />
+  <AuthorityBanner ids={["EXTVAL-APPROVAL-FREEZE-RECORD", "EXTVAL-SPEC"]} />
+  <section class="panel warning">
+    <h2>Boundary</h2>
+    <p>External Validation is not performed by this website. It requires an appointed eligible human reviewer under the frozen protocol.</p>
+  </section>
+  <SourceList ids={["EXTVAL-EVIDENCE-MANIFEST", "EXTVAL-DECLARATION-TEMPLATE", "EXTVAL-REVIEW-FORM", "EXTVAL-DECISION-TEMPLATE"]} />
+</BaseLayout>

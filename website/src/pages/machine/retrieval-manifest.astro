@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { machineManifest } from "../../lib/manifest";
+const manifest = machineManifest();
+---
+
+<BaseLayout title="Machine Retrieval Manifest" description="Machine retrieval manifest view." breadcrumbs={[{ label: "Machine Access", href: "/machine" }, { label: "Retrieval Manifest" }]}>
+  <PageHero eyebrow="Retrieval" title="Machine Retrieval Manifest" summary="Curated retrieval order for agents. Authority is not determined by recency." />
+  <section class="panel">
+    <h2>Policy</h2>
+    <p>{manifest.retrieval_policy}</p>
+    <p><a href="/manifests/machine_retrieval_manifest.json">Download machine_retrieval_manifest.json</a></p>
+  </section>
+  <section class="grid">
+    {Object.entries(manifest.preferred_entry_points).map(([key, ids]) => (
+      <div class="panel span-6"><h3>{key.replaceAll("_", " ")}</h3><p>{ids.join(", ")}</p></div>
+    ))}
+  </section>
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import AuthorityBanner from "../../../components/AuthorityBanner.astro";
+import SourceList from "../../../components/SourceList.astro";
+---
+
+<BaseLayout title="External Validation" description="External Validation definition and status." breadcrumbs={[{ label: "Projects", href: "/projects" }, { label: "Ship Health Monitoring", href: "/projects/ship-health-monitoring" }, { label: "External Validation" }]}>
+  <PageHero eyebrow="External Validation" title="Definition frozen, execution not started" summary="The External Validation mechanism is approved and frozen. No External Reviewer has been selected and execution has not started." />
+  <AuthorityBanner ids={["EXTVAL-APPROVAL-FREEZE-RECORD", "EXTVAL-SPEC"]} />
+  <section class="panel warning">
+    <h2>Human reviewer boundary</h2>
+    <p>External Validation requires an eligible human reviewer. AI-only review is not External Validation.</p>
+  </section>
+  <SourceList ids={["EXTVAL-EVIDENCE-MANIFEST", "EXTVAL-DECLARATION-TEMPLATE", "EXTVAL-REVIEW-FORM", "EXTVAL-DECISION-TEMPLATE"]} title="External Validation definition artifacts" />
+</BaseLayout>

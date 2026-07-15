@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import AuthorityBanner from "../components/AuthorityBanner.astro";
+import StatusGrid from "../components/StatusGrid.astro";
+import RelatedPages from "../components/RelatedPages.astro";
+import SourceList from "../components/SourceList.astro";
+---
+
+<BaseLayout title="Ship Health Monitoring Research Portal" description="Manifest-driven public research portal for ship health monitoring evidence and governance.">
+  <PageHero title="Ship Health Monitoring Research and Evidence Governance" summary="A public research portal for evidence-boundary ship health monitoring work. Marine validity, deployment readiness, and shipboard remaining-life capability are not established." />
+  <AuthorityBanner ids={["ROOT-README", "ROOT-PUBLISHING-STATUS", "ROOT-SYSTEM-STATE"]} />
+  <StatusGrid />
+  <section class="grid">
+    <div class="panel span-12">
+      <h2>Current milestone</h2>
+      <p><code>DEEP_RESEARCH_BLIND_REVIEW_V2_EXECUTION_PACKAGE_READY</code></p>
+      <p>The website is a derived publication layer. It does not modify claims, gaps, validation evidence, or process state.</p>
+    </div>
+  </section>
+  <RelatedPages links={[
+    { label: "Current Status", href: "/status", text: "See current project state and open process boundaries." },
+    { label: "Ship Health Monitoring", href: "/projects/ship-health-monitoring", text: "Open the project landing page and evidence boundary." },
+    { label: "Review Portal", href: "/review", text: "Access Deep Research and External Validation review interfaces." },
+    { label: "Machine Access", href: "/machine", text: "Use manifests and retrieval rules for agents and tooling." }
+  ]} />
+  <SourceList ids={["MPV1-PACKAGE", "EXTVAL-APPROVAL-FREEZE-RECORD", "BRV2-EXEC-PACKAGE-README"]} title="Primary repository sources" />
+</BaseLayout>

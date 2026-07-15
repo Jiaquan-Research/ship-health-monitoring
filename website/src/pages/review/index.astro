@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import AuthorityBanner from "../../components/AuthorityBanner.astro";
+import RelatedPages from "../../components/RelatedPages.astro";
+---
+
+<BaseLayout title="Review Portal" description="Controlled review interfaces and boundaries." breadcrumbs={[{ label: "Review Portal" }]}>
+  <PageHero eyebrow="Review Portal" title="Review mechanisms remain separate" summary="Deep Research Blind Review is advisory. External Validation is a separate human-reviewer process that has not started." />
+  <AuthorityBanner ids={["BRV2-EXEC-PACKAGE-README", "BRV2-SESSION-PROTOCOL", "EXTVAL-APPROVAL-FREEZE-RECORD"]} />
+  <section class="panel warning">
+    <h2>Prohibited review outcomes</h2>
+    <p>Review pages do not modify claims, close gaps, establish Marine validity, open the Marine request gate, or demonstrate deployment readiness.</p>
+  </section>
+  <RelatedPages links={[
+    { label: "Deep Research Review", href: "/review/deep-research", text: "Transport and execution packages for advisory blind review." },
+    { label: "External Validation", href: "/review/external-validation", text: "Human-reviewer definition and status." },
+    { label: "Machine Access", href: "/machine", text: "Manifest-driven retrieval for AI agents." }
+  ]} />
+</BaseLayout>

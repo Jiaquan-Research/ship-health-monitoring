@@ -1,0 +1,232 @@
+﻿{
+    "package_id":  "DEEP_RESEARCH_REVIEW_PACKAGE_001",
+    "package_version":  "v1.1",
+    "created_date":  "2026-07-13",
+    "package_purpose":  "Expanded fixed, hash-verifiable Deep Research review input for independent blind SOL and Fable reviews with primary evidence artifacts.",
+    "research_brief_path":  "docs/deep_research_review_package/deep_research_review_brief.md",
+    "research_brief_sha256":  "5CBEAB9C861CC9122BABF8E657E33D4787DFDAAE3F40408B269020DDDBD33D07",
+    "included_files":  [
+                           {
+                               "file_path":  "docs/marine_package_v1/marine_package_v1.md",
+                               "packaged_path":  "docs/deep_research_review_package/marine_package_v1.md",
+                               "sha256":  "23D1DDC1DBCB2AB062B15857CC5547C0D1AA3E04C043CB45907F7AAFB5A7CEEB",
+                               "file_role":  "Marine Package v1.0 main document"
+                           },
+                           {
+                               "file_path":  "docs/marine_package_v1/marine_package_v1_structure.md",
+                               "packaged_path":  "docs/deep_research_review_package/marine_package_v1_structure.md",
+                               "sha256":  "1493AC04687AEB1F81A9F7C46AAF48C28E4BB487E15D7F85025F1FBD84320BEB",
+                               "file_role":  "Marine Package v1.0 Structure"
+                           },
+                           {
+                               "file_path":  "docs/marine_package_v1/marine_package_v1_claim_boundary.md",
+                               "packaged_path":  "docs/deep_research_review_package/marine_package_v1_claim_boundary.md",
+                               "sha256":  "EB16CD25E6FC9BFAEF9001142376C47BA17140684B9A9B1B08898F93984E49B6",
+                               "file_role":  "Marine Package v1.0 Claim Boundary"
+                           },
+                           {
+                               "file_path":  "docs/marine_package_v1/marine_package_v1_evidence_map.csv",
+                               "packaged_path":  "docs/deep_research_review_package/marine_package_v1_evidence_map.csv",
+                               "sha256":  "4171CCB7D24C09140EE4CE7BBE6A084200612A957D47037AA6E024E936C9A06A",
+                               "file_role":  "Marine Package v1.0 Evidence Map"
+                           },
+                           {
+                               "file_path":  "docs/marine_package_v1/marine_package_v1_artifact_index.md",
+                               "packaged_path":  "docs/deep_research_review_package/marine_package_v1_artifact_index.md",
+                               "sha256":  "A9C20C45567178FF9987D9FAE15B25DCAFE72F6D1F609BC6D99BBE78A663A201",
+                               "file_role":  "Marine Package v1.0 Artifact Index"
+                           },
+                           {
+                               "file_path":  "docs/marine_package_v1/marine_package_v1_gap_register.md",
+                               "packaged_path":  "docs/deep_research_review_package/marine_package_v1_gap_register.md",
+                               "sha256":  "9F976AE3FDF5624066750262EF8F2A8B7940B76302986A07E9E48B4C3AF6914F",
+                               "file_role":  "Marine Package v1.0 Gap Register"
+                           },
+                           {
+                               "file_path":  "docs/marine_package_v1/marine_package_v1_completion_review.md",
+                               "packaged_path":  "docs/deep_research_review_package/marine_package_v1_completion_review.md",
+                               "sha256":  "38E0869E79B6E9C68938A794B3F666F96194DA27826EEEA0A47F34E703240D98",
+                               "file_role":  "Marine Package v1.0 Completion Review"
+                           },
+                           {
+                               "file_path":  "docs/marine_package_v1/marine_package_v1_freeze_manifest.json",
+                               "packaged_path":  "docs/deep_research_review_package/marine_package_v1_freeze_manifest.json",
+                               "sha256":  "A9E046151B1589483CE61EE3B2C79469F2CDDC55F36BDCCB9AD362A4073C95AA",
+                               "file_role":  "Marine Package v1.0 Freeze Manifest"
+                           },
+                           {
+                               "file_path":  "docs/external_validation/external_validation_of_project_results_specification.md",
+                               "packaged_path":  "docs/deep_research_review_package/external_validation_of_project_results_specification.md",
+                               "sha256":  "49F3EC10E629965F31840353E3A3C5AB60B8304D2EA70770483119597B1ACD54",
+                               "file_role":  "External Validation Specification"
+                           },
+                           {
+                               "file_path":  "docs/external_validation/external_validation_evidence_package_manifest.md",
+                               "packaged_path":  "docs/deep_research_review_package/external_validation_evidence_package_manifest.md",
+                               "sha256":  "3A9BAFF6483F7687167BCCDC42A63CE54BCE58063A61CF887E882AB208FF6E8D",
+                               "file_role":  "External Validation Evidence Package Manifest"
+                           },
+                           {
+                               "file_path":  "docs/external_validation/external_reviewer_declaration_template.md",
+                               "packaged_path":  "docs/deep_research_review_package/external_reviewer_declaration_template.md",
+                               "sha256":  "B613EEAD63B89A3952F0BA91446453A834BD20BD931115ABB9B8F21A0764C0CB",
+                               "file_role":  "External Reviewer Declaration Template"
+                           },
+                           {
+                               "file_path":  "docs/external_validation/external_validation_review_form.md",
+                               "packaged_path":  "docs/deep_research_review_package/external_validation_review_form.md",
+                               "sha256":  "8071E4F0BFCF50CFB449E7A2C50D3365A1E4D7A4520F08732AF8D7C8DDBAB7FA",
+                               "file_role":  "External Validation Review Form"
+                           },
+                           {
+                               "file_path":  "docs/external_validation/external_validation_decision_record_template.md",
+                               "packaged_path":  "docs/deep_research_review_package/external_validation_decision_record_template.md",
+                               "sha256":  "24ED9304CC660DB5B409716A43DABB5267B0531E872C5150CB00212D7AF6C89A",
+                               "file_role":  "External Validation Decision Record Template"
+                           },
+                           {
+                               "file_path":  "docs/external_validation/external_validation_definition_approval_and_freeze_record.md",
+                               "packaged_path":  "docs/deep_research_review_package/external_validation_definition_approval_and_freeze_record.md",
+                               "sha256":  "26874FB450826C6A2A3EF1FDCA70CBC9A12EEEE2416D9D09565EB3FED2B5B735",
+                               "file_role":  "External Validation Definition Approval and Freeze Record"
+                           },
+                           {
+                               "file_path":  "docs/external_validation/external_validation_definition_freeze_manifest.json",
+                               "packaged_path":  "docs/deep_research_review_package/external_validation_definition_freeze_manifest.json",
+                               "sha256":  "6914CED040BC03DFF073785CAC36E086FA4A8251225909DF7FCE72B5ABFEDE33",
+                               "file_role":  "External Validation Definition Freeze Manifest"
+                           },
+                           {
+                               "file_path":  "docs/documentation_map.md",
+                               "packaged_path":  "docs/deep_research_review_package/documentation_map.md",
+                               "sha256":  "5119A1C8D5577C556B7E9160418D1AE02759C1C5BEFB90136C998108A5A1A520",
+                               "file_role":  "Documentation Map"
+                           },
+                           {
+                               "file_path":  "outputs/codlag_expected_state/stratified_residual_diagnostic/CODLAG_stratified_residual_diagnostic_summary.md",
+                               "packaged_path":  "docs/deep_research_review_package/CODLAG_stratified_residual_diagnostic_summary.md",
+                               "sha256":  "B6EF905049E9583AD4DBFDF886F6D97564DEEE6ECC502A6541914A6BA0C17375",
+                               "file_role":  "CODLAG residual boundary evidence"
+                           },
+                           {
+                               "file_path":  "docs/validation/framework_validation/CODLAG_expected_state_baseline_execution_record.md",
+                               "packaged_path":  "docs/deep_research_review_package/CODLAG_expected_state_baseline_execution_record.md",
+                               "sha256":  "49CFC7EF60D9E9003796BD0608EC0834112E7AF4E100549B2EB977FE85161DF9",
+                               "file_role":  "CODLAG Expected State execution record"
+                           },
+                           {
+                               "file_path":  "docs/validation/framework_validation/PRONOSTIA-BD-001_closure_review.md",
+                               "packaged_path":  "docs/deep_research_review_package/PRONOSTIA-BD-001_closure_review.md",
+                               "sha256":  "79E1303F1C9972F2994B22B64BF90F1915A1AFC555EA238C0E977406485443E9",
+                               "file_role":  "PRONOSTIA fixed-condition closure review"
+                           },
+                           {
+                               "file_path":  "docs/validation/framework_validation/PRONOSTIA-BD-001_execution_summary.md",
+                               "packaged_path":  "docs/deep_research_review_package/PRONOSTIA-BD-001_execution_summary.md",
+                               "sha256":  "7ED40F351FFB57A3EADA265198893646FC2B817E4538E57218641D8BB83D9410",
+                               "file_role":  "PRONOSTIA fixed-condition execution summary"
+                           },
+                           {
+                               "file_path":  "docs/validation/framework_validation/FD002_consolidated_closure_report.md",
+                               "packaged_path":  "docs/deep_research_review_package/FD002_consolidated_closure_report.md",
+                               "sha256":  "CB0F891AB913F5015E036493DAF7CF3C97BCD61C0E37E90A8F985C2134CF0355",
+                               "file_role":  "FD002 residual evidence closure report"
+                           },
+                           {
+                               "file_path":  "docs/validation/framework_validation/FD002_existing_state_audit.md",
+                               "packaged_path":  "docs/deep_research_review_package/FD002_existing_state_audit.md",
+                               "sha256":  "7210B4BBF25C0841D78B901E0B8499DD02C325BE1FFA0CA7AF3AA79BB865E046",
+                               "file_role":  "FD002 existing-state audit"
+                           },
+                           {
+                               "file_path":  "docs/validation/framework_validation/FD002_health_evidence_v0_execution_summary.md",
+                               "packaged_path":  "docs/deep_research_review_package/FD002_health_evidence_v0_execution_summary.md",
+                               "sha256":  "A77CAACFD93A66E4400A57A3038CB6959905EECC739DF8B1A7E9505E253A9612",
+                               "file_role":  "FD002 Health Evidence numerical support"
+                           },
+                           {
+                               "file_path":  "docs/validation/framework_validation/FD002_HI_v0_closure_review.md",
+                               "packaged_path":  "docs/deep_research_review_package/FD002_HI_v0_closure_review.md",
+                               "sha256":  "B98DCB6E3E859FEB2B061742378B696CB5F26EA60E0E9B2E4A72A6D973E37495",
+                               "file_role":  "FD002 HI closure review"
+                           },
+                           {
+                               "file_path":  "outputs/cmapss_fd002/phase_b/B1_fixed_channel/CMAPSS_FD002_B1_cross_model_comparison_summary.csv",
+                               "packaged_path":  "docs/deep_research_review_package/CMAPSS_FD002_B1_cross_model_comparison_summary.csv",
+                               "sha256":  "2A511C1873222A12A01A8ABE47B4ADEA6547358D9F8201FC4A61359DD419C9A6",
+                               "file_role":  "FD002 cross-model numerical support"
+                           },
+                           {
+                               "file_path":  "docs/validation/ncmapss_prevalidation/NCMAPSS_prevalidation_completion_summary.md",
+                               "packaged_path":  "docs/deep_research_review_package/NCMAPSS_prevalidation_completion_summary.md",
+                               "sha256":  "652BF49E2403D613AB80E13DF26FC9DC9CAC66F50ACF4685D7F8B114230A9385",
+                               "file_role":  "N-CMAPSS DS02 residual pilot completion summary"
+                           },
+                           {
+                               "file_path":  "docs/validation/ncmapss_prevalidation/NCMAPSS_DS02_residual_prevalidation_diagnostic_review.md",
+                               "packaged_path":  "docs/deep_research_review_package/NCMAPSS_DS02_residual_prevalidation_diagnostic_review.md",
+                               "sha256":  "AB57260F4D3064B88C44179A0EDBDD60800BB340F0CABF8AF8DD5FC183B05FB8",
+                               "file_role":  "N-CMAPSS DS02 residual pilot review evidence"
+                           },
+                           {
+                               "file_path":  "outputs/ncmapss/prevalidation/ds02_residual_001/NCMAPSS_DS02_HI_summary.csv",
+                               "packaged_path":  "docs/deep_research_review_package/NCMAPSS_DS02_HI_summary.csv",
+                               "sha256":  "3817E3EAD20A1802199FDE15B51BE0D1774ED083E2A958CBC0D0CBE3A77CD3E5",
+                               "file_role":  "N-CMAPSS DS02 residual pilot numerical support"
+                           },
+                           {
+                               "file_path":  "docs/validation/public_data_nonresidual/ncmapss_ds02_nonresidual_development_closure_report.md",
+                               "packaged_path":  "docs/deep_research_review_package/ncmapss_ds02_nonresidual_development_closure_report.md",
+                               "sha256":  "62BC35DDB72DB6B907C6134985D818DB52D0833F455C07668EE72FF4C649F903",
+                               "file_role":  "N-CMAPSS DS02 nonresidual development closure evidence"
+                           },
+                           {
+                               "file_path":  "docs/validation/public_data_nonresidual/ncmapss_ds02_nonresidual_archive_summary.md",
+                               "packaged_path":  "docs/deep_research_review_package/ncmapss_ds02_nonresidual_archive_summary.md",
+                               "sha256":  "10A7B2AE82CB172A67253826AE3F2ABAD469CE4F5E4D17DB7088F34B2E2D57BB",
+                               "file_role":  "N-CMAPSS DS02 nonresidual archive evidence"
+                           },
+                           {
+                               "file_path":  "outputs/public_data_nonresidual/ncmapss_ds02/dev_004/cusum_reference_diagnostic_summary.json",
+                               "packaged_path":  "docs/deep_research_review_package/cusum_reference_diagnostic_summary.json",
+                               "sha256":  "F91AEE9710236F3D90C0AACA31D1D6DAC47DFAD787B868665CAF57963DEA37E4",
+                               "file_role":  "CUSUM unresolved diagnostic numerical support"
+                           },
+                           {
+                               "file_path":  "lbnl_expected_state/docs/architecture/health_evidence_framework.md",
+                               "packaged_path":  "docs/deep_research_review_package/health_evidence_framework.md",
+                               "sha256":  "7B25A9A0CC0C373882F9945C3F3377FE13EB98764D5516EE973F40D9BE6C239D",
+                               "file_role":  "Health Evidence architecture authority"
+                           },
+                           {
+                               "file_path":  "lbnl_expected_state/docs/decisions/DD-002_residual_evidence_hierarchy.md",
+                               "packaged_path":  "docs/deep_research_review_package/DD-002_residual_evidence_hierarchy.md",
+                               "sha256":  "FC3297D68F48FC2B4AA9F7B161FD229BAB1EA5EC97E06E74B67A3F8C443E4007",
+                               "file_role":  "Residual evidence hierarchy authority"
+                           },
+                           {
+                               "file_path":  "lbnl_expected_state/docs/decisions/DD-003_project_terminology_standard.md",
+                               "packaged_path":  "docs/deep_research_review_package/DD-003_project_terminology_standard.md",
+                               "sha256":  "895CB03BA805D471538E4DA9BB06E80E50E15B1E8C76015A6E33D6BB5C40C8C2",
+                               "file_role":  "Project terminology authority"
+                           },
+                           {
+                               "file_path":  "lbnl_expected_state/docs/decisions/DD-005_stateful_health_indicator_lifecycle.md",
+                               "packaged_path":  "docs/deep_research_review_package/DD-005_stateful_health_indicator_lifecycle.md",
+                               "sha256":  "210C4A4AD1E6DBBF3400DCDCC69E30C7AAD245C22A75248D9E1DA473AA5BFA3A",
+                               "file_role":  "Stateful HI lifecycle architecture authority"
+                           },
+                           {
+                               "file_path":  "lbnl_expected_state/docs/decisions/DD-006_evidence_diversity_principle.md",
+                               "packaged_path":  "docs/deep_research_review_package/DD-006_evidence_diversity_principle.md",
+                               "sha256":  "4412CFE4C444766073207216A1EE29E831642A1B6513470804A3528B95AB1D94",
+                               "file_role":  "Evidence diversity principle authority"
+                           },
+                           {
+                               "file_path":  "docs/deep_research_review_package/deep_research_review_brief.md",
+                               "packaged_path":  "docs/deep_research_review_package/deep_research_review_brief.md",
+                               "sha256":  "5CBEAB9C861CC9122BABF8E657E33D4787DFDAAE3F40408B269020DDDBD33D07",
+                               "file_role":  "Deep Research Review Brief"
+                           }
+                       ]
+}

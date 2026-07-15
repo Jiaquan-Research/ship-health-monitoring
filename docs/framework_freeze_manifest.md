@@ -1,0 +1,206 @@
+# Framework Freeze Manifest
+
+Purpose: provide artifact governance for Framework Freeze v1.1.
+
+This manifest identifies permanent framework documents, supporting engineering documents, experimental artifacts, reproducible outputs, archived material, personal notes, and Chinese references.
+
+It does not move files, delete files, or change repository behaviour.
+
+## Current Freeze Identity
+
+Current authoritative freeze:
+
+```text
+Framework Freeze v1.1
+```
+
+Framework Freeze v1.1 supersedes Framework Freeze v1.0 for current governance identity.
+
+Framework Freeze v1.0 remains retained as historical freeze evidence.
+
+## Freeze Lineage
+
+```text
+Framework Freeze v1.0
+
+->
+
+ST-001 Governance Revision
+
+->
+
+Framework Freeze v1.1
+```
+
+## Freeze Integrity
+
+Framework Freeze v1.1 integrity is recorded as follows:
+
+| Field | Value |
+|---|---|
+| Freeze Date | 2026-07-03 |
+| Commit | `4ce815d4ef24f0ac89f22a35bd5557756d0105a6` |
+| Tag | `framework-v1.1-freeze` |
+| Branch | `master` |
+| Certificate Reference | `docs/governance/framework_freeze_certificate_v1_1.md` |
+
+Historical Framework Freeze v1.0 integrity remains recorded as follows:
+
+| Field | Value |
+|---|---|
+| Freeze Date | 2026-07-02 |
+| Commit | `bb653214457351ba836229b96a5939521ab14944` |
+| Tag | `framework-v1.0-freeze` |
+| Branch | `master` |
+| Certificate Reference | `docs/governance/framework_freeze_certificate_v1.md` |
+
+The manifest defines what is frozen.
+
+The certificate records how the freeze is verified.
+
+## Permanent Framework Documents
+
+These documents define the current Health Evidence Framework and should be retained as canonical Framework Freeze v1.1 documents.
+
+- [Health Evidence Framework](../lbnl_expected_state/docs/architecture/health_evidence_framework.md)
+- [Evidence Philosophy Taxonomy](../lbnl_expected_state/docs/framework/evidence_philosophy_taxonomy.md)
+- [H5B Health Evidence Prototype Benchmark Summary](../lbnl_expected_state/docs/phase2/h5_summary.md)
+- [H5C Evidence Committee Specification](../lbnl_expected_state/docs/specifications/h5c_evidence_committee_spec.md)
+- [Gate M2 Phase 2 Milestone Review](../lbnl_expected_state/docs/gates/gate_m2_phase2_milestone_review.md)
+- [Gate M2.5 Prototype Freeze Review](../lbnl_expected_state/docs/gates/gate_m2_5_prototype_freeze_review.md)
+- [Gate M3 Repository Accessibility Test](../lbnl_expected_state/docs/gates/gate_m3_repository_accessibility.md)
+- [Gate M3 Audit Response Matrix](../lbnl_expected_state/docs/gates/gate_m3_audit_response_matrix.md)
+- [Gate M3 Audit Response Matrix Reviewer #2](governance/gate_m3_audit_response_matrix_r2.md)
+
+## Frozen Architectural Object
+
+Framework Freeze v1.1 references the frozen architectural object defined in the Validation Roadmap.
+
+Framework Freeze v1.1 freezes:
+
+- governance decision layers;
+- decision philosophy;
+- architectural boundary.
+
+Framework Freeze v1.1 does not freeze:
+
+- algorithms;
+- statistical methods;
+- expected-state implementations;
+- evidence generators;
+- semantic rules;
+- dataset-specific implementations.
+
+## Permanent Decision Documents
+
+- [DD-002 Residual Evidence Hierarchy](../lbnl_expected_state/docs/decisions/DD-002_residual_evidence_hierarchy.md)
+- [DD-003 Project Terminology Standard](../lbnl_expected_state/docs/decisions/DD-003_project_terminology_standard.md)
+- [DD-004 Semantic Window Validation](../lbnl_expected_state/docs/decisions/DD-004_semantic_window_validation.md)
+- [DD-005 Stateful Health Indicator Lifecycle](../lbnl_expected_state/docs/decisions/DD-005_stateful_health_indicator_lifecycle.md)
+- [DD-006 Evidence Diversity Principle](../lbnl_expected_state/docs/decisions/DD-006_evidence_diversity_principle.md)
+
+## Supporting Engineering Documents
+
+These documents support Framework Freeze v1.1 but are not Design Decisions.
+
+- [Repository Documentation Map](documentation_map.md)
+- [Framework Audit Package](framework_audit_package.md)
+- [Dataset Registry](dataset_registry.md)
+- [Dataset Qualification Specification](dataset_qualification_specification.md)
+- [Dataset Qualification Record Template](validation/dataset_onboarding/dataset_qualification_record_template.md)
+- [LBNL Dataset Qualification Record](validation/dataset_onboarding/LBNL_dataset_qualification_record.md)
+- [Framework Freeze Certificate v1.1](governance/framework_freeze_certificate_v1_1.md)
+- [Artifact Policy](artifact_policy.md)
+- [Framework Freeze Manifest](framework_freeze_manifest.md)
+- [Gate M3 Audit Response Matrix Reviewer #2](governance/gate_m3_audit_response_matrix_r2.md)
+- [RL-001 Three Layer Engineering Architecture](../lbnl_expected_state/docs/research_logs/RL-001_three_layer_engineering_architecture.md)
+- [RL-002 Maintenance as Second Information Stream](../lbnl_expected_state/docs/research_logs/RL-002_maintenance_as_second_information_stream.md)
+
+## Experimental Artifacts
+
+Framework v1.1 depends on experimental evidence generated by the LBNL validation pipeline.
+
+Canonical experimental artifact families:
+
+- reports under `lbnl_expected_state/outputs/reports/`;
+- summary CSVs under `lbnl_expected_state/outputs/csv/`;
+- figures under `lbnl_expected_state/outputs/figures/`;
+- manifests under `lbnl_expected_state/outputs/manifests/`;
+- model artifact under `lbnl_expected_state/outputs/models/`.
+
+These artifacts support traceability from Expected State construction through H5B Evidence Prototype benchmarking.
+
+## Reproducible Outputs
+
+The following output types are considered reproducible artifacts:
+
+- generated residual timeline CSVs;
+- Health Evidence candidate timeline CSVs;
+- H4B group membership CSVs;
+- audit summary CSVs;
+- generated figures;
+- model files produced from the documented training pipeline.
+
+Large reproducible outputs may be retained outside ordinary Git history if an archive or regeneration policy is recorded.
+
+## Archived Material
+
+The following areas should be treated as historical or archive material unless explicitly referenced by the current framework:
+
+- root-level `outputs/`;
+- root-level exploratory validation outputs;
+- older concept paper drafts;
+- older review drafts;
+- superseded experiment specifications;
+- historical research notes not referenced by canonical framework documents.
+
+Recommended future archive categories:
+
+```text
+archive/
+  legacy/
+  superseded/
+  historical/
+```
+
+No archive movement is performed by this manifest.
+
+## Personal Notes
+
+Personal notes are not part of Framework Freeze v1.1.
+
+Recommended future non-Git organization:
+
+```text
+personal_notes/
+  chinese_reviews/
+  deep_research_cn/
+  translations/
+  discussion_notes/
+```
+
+## Chinese References
+
+Chinese references, review notes, translated drafts, and personal discussion notes are excluded from the Framework Freeze v1.1 GitHub review scope unless explicitly referenced by canonical framework documents.
+
+They should be retained for personal reference but should not be used as required reviewer inputs for Framework Freeze v1.1.
+
+## Freeze Governance
+
+Framework Freeze v1.1 retains:
+
+- canonical framework documents;
+- Design Decisions;
+- gate reviews;
+- audit response records;
+- framework specifications;
+- required supporting engineering documents.
+
+Framework Freeze v1.1 does not require:
+
+- committing every generated large CSV;
+- committing every historical output;
+- committing every personal note;
+- committing every exploratory research draft.
+
+Any future freeze package should explicitly identify which generated outputs are retained in Git, retained in Git LFS, archived externally, or regenerated from scripts.

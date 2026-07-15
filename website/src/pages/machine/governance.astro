@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import AuthorityBanner from "../../components/AuthorityBanner.astro";
+---
+
+<BaseLayout title="Machine Governance" description="Authority and lifecycle vocabularies for machine access." breadcrumbs={[{ label: "Machine Access", href: "/machine" }, { label: "Governance" }]}>
+  <PageHero eyebrow="Governance" title="Machine-readable authority model" summary="Document IDs, authority levels, lifecycle states, copy roles, public visibility, and retrieval priority guide machine access." />
+  <AuthorityBanner ids={["GOV-REPOSITORY-POLICY", "GOV-MACHINE-RETRIEVAL-POLICY", "MANIFEST-README"]} />
+  <section class="grid">
+    <div class="panel span-6"><h2>Authority levels</h2><p>Repository state authority, scope authority, derived summary, navigation only, operator context, delivery interface, and non-authoritative.</p></div>
+    <div class="panel span-6"><h2>Copy roles</h2><p>Source, derived summary, transport copy, execution copy, website derivative, and navigation record.</p></div>
+    <div class="panel span-6"><h2>Lifecycle states</h2><p>Draft, reviewed, approved, frozen, active append-only, superseded, archived, and historical note.</p></div>
+    <div class="panel span-6"><h2>Retrieval priority</h2><p>Priority 1 is highest. Recency is not authority.</p></div>
+  </section>
+</BaseLayout>

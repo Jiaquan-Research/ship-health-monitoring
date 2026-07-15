@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import AuthorityBanner from "../../../components/AuthorityBanner.astro";
+import SourceList from "../../../components/SourceList.astro";
+---
+
+<BaseLayout title="Marine Package v1.0" description="Frozen Marine Package v1.0 overview." breadcrumbs={[{ label: "Projects", href: "/projects" }, { label: "Ship Health Monitoring", href: "/projects/ship-health-monitoring" }, { label: "Marine Package" }]}>
+  <PageHero eyebrow="Scope authority" title="Marine Package v1.0" summary="Marine Package v1.0 is complete and frozen with documented gaps. It does not claim Marine validity or deployment readiness." />
+  <AuthorityBanner ids={["MPV1-PACKAGE", "MPV1-GAP-REGISTER", "MPV1-ARTIFACT-INDEX"]} />
+  <section class="grid">
+    <div class="panel span-6"><h2>Allowed statement</h2><p>The package records public-data evidence, framework architecture, claim boundaries, and future validation requirements.</p></div>
+    <div class="panel span-6 warning"><h2>Prohibited statement</h2><p>Do not state that the package validates Marine performance, shipboard alarms, RUL, or deployment readiness.</p></div>
+  </section>
+  <SourceList ids={["MPV1-CLAIM-BOUNDARY", "MPV1-EVIDENCE-MAP", "MPV1-COMPLETION-REVIEW", "MPV1-FREEZE-MANIFEST"]} />
+</BaseLayout>

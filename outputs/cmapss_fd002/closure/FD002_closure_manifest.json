@@ -1,0 +1,52 @@
+{
+  "closure_decision": "CMAPSS_FD002_RESIDUAL_EVIDENCE_HI_AND_PHASE_B1_COMPLETED_WITH_DOCUMENTED_LINEAGE_AND_SENSITIVITY_LIMITATIONS",
+  "closure_report_path": "docs/validation/framework_validation/FD002_consolidated_closure_report.md",
+  "closure_report_hash": "CB0F891AB913F5015E036493DAF7CF3C97BCD61C0E37E90A8F985C2134CF0355",
+  "archive_summary_path": "docs/validation/framework_validation/FD002_archive_summary.md",
+  "archive_summary_hash": "3722EA435CF41B7FC928A0FC34095E403F47FDE85A941A25D6B1B9273BFEE6DB",
+  "frozen_audit_path": "docs/validation/framework_validation/FD002_existing_state_audit.md",
+  "frozen_audit_hash": "7210B4BBF25C0841D78B901E0B8499DD02C325BE1FFA0CA7AF3AA79BB865E046",
+  "claim_audit_hash": "D790CEBF9135E5B13462736E31C7644B115C50FF42B85FF91A4D1A6F0B487583",
+  "artifact_inventory_hash": "3B39A0858014224A01BB79ABCDE0A078CFE2548F5252FD960A0F8B973A73332C",
+  "dataset_lineage_hash": "8C7F8C622814E29A45403A0F40B867BA6B44F300F28A0CE1C2F7A7209B832098",
+  "audit_summary_hash": "D87BF56F38CB322A9F99AE9BD82647CC7DF4EA040CA6741BB6C91C5771371926",
+  "dataset_hashes": {
+    "outer_dataset_package": "C9C5DEC12A945A82E8BB4446589D7FB3CC057B5E5D81FA1A12E25EE9912AD3B2",
+    "inner_CMAPSSData_zip": "74BEF434A34DB25C7BF72E668EA4CD52AFE5F2CF8E44367C55A82BFD91A5A34F",
+    "train_FD002_txt": "DAC6C4DBC4E7C1BDEB5747DA3D313D05C395BB99801B44A002B26A2BA13D788F",
+    "test_FD002_txt": "DE7B5BF7E998A985C378488480528B7C02CFF1406A46740DEF362DDA8D9B4E02",
+    "RUL_FD002_txt": "C851DD96A6EA6998D3C4A8F834D3C8013AA90E93A6ED950DC826AD0655B2906B"
+  },
+  "canonical_metrics": {
+    "BL150_sensor_11_absolute_residual_correlation": -0.6090043819301661,
+    "BL150_sensor_11_raw_residual_correlation": -0.691596119241661,
+    "BL175_sensor_11_absolute_residual_correlation": -0.6229008182517646,
+    "BL175_sensor_11_raw_residual_correlation": -0.6911812248771092,
+    "HI_variant": "HI_primary_equal_uncentered",
+    "HI_metric": "median_spearman_hi",
+    "HI_BL150": 0.7583807420883869,
+    "HI_BL175": 0.7743753188563743,
+    "fraction_positive": 1.0
+  },
+  "completed_stages": [
+    "BL150",
+    "BL175",
+    "Health Evidence v0",
+    "HI v0",
+    "Phase B1"
+  ],
+  "deferred_items": [
+    "15% / 20% window sensitivity",
+    "Phase B2",
+    "Health Assessment"
+  ],
+  "lineage_limitations": [
+    "historical dataset hashes not recorded",
+    "explicit historical source execution scripts not located",
+    "document-level lineage only for BL150, BL175, Health Evidence v0, HI v0, and Phase B1"
+  ],
+  "marine_validity": "NOT_CLAIMED",
+  "health_assessment_status": "NOT_PERFORMED",
+  "historical_numerical_artifacts_modified": false,
+  "closure_timestamp": "2026-07-12T03:05:39.212246+00:00"
+}

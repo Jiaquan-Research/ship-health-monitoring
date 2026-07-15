@@ -1,0 +1,16 @@
+---
+interface Props {
+  links: { label: string; href: string; text: string }[];
+}
+const { links } = Astro.props;
+---
+<section class="grid">
+  {links.map((link) => (
+    <a class="card-link span-4" href={link.href}>
+      <div class="panel">
+        <h3>{link.label}</h3>
+        <p>{link.text}</p>
+      </div>
+    </a>
+  ))}
+</section>

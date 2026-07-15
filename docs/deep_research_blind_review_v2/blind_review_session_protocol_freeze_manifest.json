@@ -1,0 +1,145 @@
+{
+  "manifest_type": "blind_review_session_protocol_freeze",
+  "source_transport_id": "DEEP_RESEARCH_REVIEW_PACKAGE_TRANSPORT_V2_001",
+  "source_transport_version": "v2.0",
+  "protocol_document_count": 16,
+  "main_profile_count": 3,
+  "evidence_profile_count": 3,
+  "reading_pack_coverage": "10/10",
+  "evidence_pack_coverage": "11/11",
+  "verification_decision": "DEEP_RESEARCH_BLIND_REVIEW_SESSION_PROTOCOL_VERIFIED",
+  "approval_decision": "DEEP_RESEARCH_BLIND_REVIEW_SESSION_PROTOCOL_APPROVED",
+  "freeze_decision": "DEEP_RESEARCH_BLIND_REVIEW_SESSION_PROTOCOL_FROZEN",
+  "combined_state": "DEEP_RESEARCH_BLIND_REVIEW_SESSION_PROTOCOL_APPROVED_VERIFIED_AND_FROZEN",
+  "blind_review_execution_started": "No",
+  "files": [
+    {
+      "path": "docs/deep_research_blind_review_v2/blind_review_execution_observation_log.md",
+      "role": "execution_observation_log",
+      "schema_status": "FROZEN",
+      "mutability": "ACTIVE_APPEND_ONLY",
+      "baseline_hash_authority": "blind_review_session_protocol_freeze_manifest.json",
+      "initial_baseline_sha256": "4E1A5300FAB73919F3B37CF6A830BC9853F4EE8B8D72A092E13F75BEEA8FE1FF",
+      "initial_baseline_byte_length": 3116,
+      "excluded_from_continuous_protocol_integrity_after_execution_start": true
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/blind_review_execution_protocol.md",
+      "role": "session_protocol_document",
+      "sha256": "643706871891B817A4A3B53813EB334F13BF91941909C5149006DCF8E9BE92E0",
+      "byte_length": 2984
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/blind_review_session_protocol.md",
+      "role": "session_protocol_document",
+      "sha256": "2B884244DAC3BFCD06D73F48BAE29F08E10AB7A972EB404C8E3110D8CE700564",
+      "byte_length": 2072
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/blind_review_session_protocol_approval_and_freeze_record.md",
+      "role": "approval_and_freeze_record",
+      "sha256": "9F62F56D8E5C35ECC6599CD5EA04572A57032E3F91B3B6BCE469298B8B947586",
+      "byte_length": 1411
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/blind_review_session_protocol_verification_report.md",
+      "role": "verification_report",
+      "sha256": "2636E3417E0BD2D4F53E659B78D21A331C040AAC861843FD4979AA74F583E4C2",
+      "byte_length": 1506
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/completion_summary.md",
+      "role": "session_protocol_document",
+      "sha256": "9C7C6A8531984EF0AD3F7738BC06F42C15EA68E67F463B906C631E396DCD0DA9",
+      "byte_length": 1196
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/continuation_protocol.md",
+      "role": "session_protocol_document",
+      "sha256": "E480DAC49650B15DB3C4FE8B1A15F6C2D2CEEC99DE661C996F10F1ED90F3E067",
+      "byte_length": 1563
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/evidence_request_protocol.md",
+      "role": "session_protocol_document",
+      "sha256": "977BE4352227604DD6486947B509D33D614F22FE2D95536B27C9B012691F96DA",
+      "byte_length": 1714
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/evidence_session_protocol.md",
+      "role": "session_protocol_document",
+      "sha256": "4BBE66F8494C5520EFFEABE6A1BBE469DE0499D4A182AB2C110A9A5AEB5E2AC4",
+      "byte_length": 1082
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/execution_checklist.md",
+      "role": "session_protocol_document",
+      "sha256": "6D37B3A57D8332331C7065998DB8B5A1930D1BB806DEA5D98B146046AD391F43",
+      "byte_length": 1887
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/platform_capability_matrix.md",
+      "role": "session_protocol_document",
+      "sha256": "FDA1FA509CA03429D8D0904CCB8D8208D13B25BC22053A044E9EA39483124ADC",
+      "byte_length": 2366
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/reviewer_prompt_templates.md",
+      "role": "session_protocol_document",
+      "sha256": "E8DA91A69BC6C3929115AA1731CE555BDE5CB2D138E778AB3CD8823617848BB6",
+      "byte_length": 2457
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/session_architecture.md",
+      "role": "session_protocol_document",
+      "sha256": "752007E110B8DE99760204C2D6CE6B55CE09F46A4433A9896F5CDAB48CB1473E",
+      "byte_length": 1920
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/session_profiles.md",
+      "role": "session_protocol_document",
+      "sha256": "B3B0ECAA1850E0E4370985C7A33B17368853DB23BAA9593D9E86F6D38929115C",
+      "byte_length": 3824
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/session_protocol_freeze_completion_summary.md",
+      "role": "completion_summary",
+      "sha256": "F7592CA89C1F1206B47E777067E48CD17AFE8155678BFAB0079A336B5EFE1BAC",
+      "byte_length": 1357
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/session_state_model.md",
+      "role": "session_protocol_document",
+      "sha256": "86102C80AB8F0D48E19A5A94E15E45D690E8096E06339828722B5B8BD2AB7BCA",
+      "byte_length": 1103
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/session_transition_rules.md",
+      "role": "session_protocol_document",
+      "sha256": "D455DC5D75571C02FE28DC295EF0CE101437761AD98B93E7FC32B92DF9A5C86A",
+      "byte_length": 1375
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/upload_profiles.md",
+      "role": "session_protocol_document",
+      "sha256": "6F528837D7D7B9D8A6B39E179066862929900507DD00A1B4BC3A2CF2EC2E3513",
+      "byte_length": 4077
+    },
+    {
+      "path": "docs/deep_research_blind_review_v2/upload_sequences.md",
+      "role": "session_protocol_document",
+      "sha256": "2B53F2F0549FEC665809C6A1C3999600AE873CDB3173BE606B638171DB836284",
+      "byte_length": 1850
+    }
+  ],
+  "self_hash_policy": "This manifest does not contain its own SHA-256.",
+  "active_log_policy": {
+    "protocol_documents_remain_immutable": true,
+    "observation_log_schema_status": "FROZEN",
+    "observation_entries_policy": "ACTIVE_APPEND_ONLY",
+    "appended_entries_do_not_invalidate_protocol_freeze": true,
+    "unauthorized_schema_changes_invalidate_freeze": true,
+    "existing_entries_must_not_be_silently_edited_or_deleted": true,
+    "prior_entry_corrections_must_be_added_as_superseding_entries": true
+  }
+}

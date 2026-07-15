@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import AuthorityBanner from "../../../components/AuthorityBanner.astro";
+import SourceList from "../../../components/SourceList.astro";
+---
+
+<BaseLayout title="Public Dataset Validation" description="Public-data validation roles and limits." breadcrumbs={[{ label: "Projects", href: "/projects" }, { label: "Ship Health Monitoring", href: "/projects/ship-health-monitoring" }, { label: "Validation" }]}>
+  <PageHero eyebrow="Validation" title="Public Dataset Validation" summary="Public-data records support bounded technical learning and do not reproduce Marine operating conditions." />
+  <AuthorityBanner ids={["MPV1-PACKAGE", "MPV1-EVIDENCE-MAP", "MPV1-ARTIFACT-INDEX"]} />
+  <section class="grid">
+    <div class="panel span-6"><h2>Dataset roles</h2><p>CODLAG, PRONOSTIA, FD002, and N-CMAPSS DS02 serve different boundary, residual, Evidence, HI, and development roles.</p></div>
+    <div class="panel span-6 warning"><h2>No unified benchmark</h2><p>The site must not imply a common benchmark or direct Marine transfer proof.</p></div>
+  </section>
+  <SourceList ids={["TRV2-GUIDE", "TRV2-INTEGRITY-MANIFEST"]} title="Review transport for validation evidence" />
+</BaseLayout>

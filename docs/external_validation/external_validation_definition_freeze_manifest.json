@@ -1,0 +1,40 @@
+{
+  "manifest_type": "external_validation_definition_freeze",
+  "version": "v1.0",
+  "freeze_state": "EXTERNAL_VALIDATION_DEFINITION_APPROVED_AND_FROZEN",
+  "external_validation_execution_state": "NOT_STARTED",
+  "external_reviewer_state": "NOT_SELECTED",
+  "marine_request_gate_state": "MARINE_REQUEST_GATE_NOT_EVALUATED",
+  "marine_data_request_state": "PLANNED_NOT_STARTED",
+  "evidence_package_state": "FROZEN_DEFINITION_NOT_ISSUED",
+  "frozen_artifacts": [
+    {
+      "artifact_id": "EXTVAL-SPEC",
+      "path": "docs/external_validation/external_validation_of_project_results_specification.md",
+      "sha256": "49F3EC10E629965F31840353E3A3C5AB60B8304D2EA70770483119597B1ACD54"
+    },
+    {
+      "artifact_id": "EXTVAL-EVIDENCE-MANIFEST",
+      "path": "docs/external_validation/external_validation_evidence_package_manifest.md",
+      "sha256": "3A9BAFF6483F7687167BCCDC42A63CE54BCE58063A61CF887E882AB208FF6E8D"
+    },
+    {
+      "artifact_id": "EXTVAL-REVIEWER-DECLARATION",
+      "path": "docs/external_validation/external_reviewer_declaration_template.md",
+      "sha256": "B613EEAD63B89A3952F0BA91446453A834BD20BD931115ABB9B8F21A0764C0CB"
+    },
+    {
+      "artifact_id": "EXTVAL-REVIEW-FORM",
+      "path": "docs/external_validation/external_validation_review_form.md",
+      "sha256": "8071E4F0BFCF50CFB449E7A2C50D3365A1E4D7A4520F08732AF8D7C8DDBAB7FA"
+    },
+    {
+      "artifact_id": "EXTVAL-DECISION-TEMPLATE",
+      "path": "docs/external_validation/external_validation_decision_record_template.md",
+      "sha256": "24ED9304CC660DB5B409716A43DABB5267B0531E872C5150CB00212D7AF6C89A"
+    }
+  ],
+  "approval_record_path": "docs/external_validation/external_validation_definition_approval_and_freeze_record.md",
+  "approval_record_hash_source": "RECORDED_IN_ARTIFACT_INDEX",
+  "created_by_task": "EXTERNAL_VALIDATION_DEFINITION_APPROVAL_AND_FREEZE_001"
+}

@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import AuthorityBanner from "../components/AuthorityBanner.astro";
+import StatusGrid from "../components/StatusGrid.astro";
+import SourceList from "../components/SourceList.astro";
+---
+
+<BaseLayout title="Current Status" description="Current process state for the jqhe.uk research portal." breadcrumbs={[{ label: "Current Status" }]}>
+  <PageHero eyebrow="Repository state" title="Current Status" summary="SYSTEM_STATE.md remains the current-state authority. This page is a derived public view." />
+  <AuthorityBanner ids={["ROOT-SYSTEM-STATE", "ROOT-PUBLISHING-STATUS"]} note="SYSTEM_STATE.md is the repository current-state authority. Website pages summarize that state but do not redefine it." />
+  <StatusGrid />
+  <section class="panel">
+    <h2>Next authorized workstream</h2>
+    <p><code>DEEP_RESEARCH_BLIND_REVIEW_V2_EXECUTION_001</code></p>
+    <p>This website implementation does not start that workstream.</p>
+  </section>
+  <SourceList ids={["ROOT-SYSTEM-STATE", "ROOT-PUBLISHING-STATUS", "ROOT-README"]} />
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import AuthorityBanner from "../components/AuthorityBanner.astro";
+import RelatedPages from "../components/RelatedPages.astro";
+---
+
+<BaseLayout title="Projects" description="Project registry derived from the repository manifest." breadcrumbs={[{ label: "Projects" }]}>
+  <PageHero eyebrow="Projects" title="Research projects" summary="Project entries are derived from manifest project scopes. v0.1 exposes Ship Health Monitoring as the active public project." />
+  <AuthorityBanner ids={["DOCMAP", "ROOT-PUBLISHING-STATUS"]} />
+  <RelatedPages links={[
+    { label: "Ship Health Monitoring", href: "/projects/ship-health-monitoring", text: "Public-data evidence package, framework architecture, and review interfaces." }
+  ]} />
+</BaseLayout>

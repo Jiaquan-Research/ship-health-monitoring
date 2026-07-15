@@ -1,98 +1,123 @@
 # Ship Health Monitoring
 
-This repository develops a Health Evidence framework for continuous industrial equipment monitoring. The current validation path uses the LBNL chiller plant dataset as an engineering pipeline dataset before future marine validation.
+This repository contains a traceable research and governance package for a ship health monitoring framework. The current public state is an evidence-boundary package: it consolidates public-data validation evidence, framework architecture, claim boundaries, open gaps, and review protocols before any Marine data request or Marine validation begins.
 
-The project focus is not algorithm competition. The current objective is to build a traceable engineering framework that connects Expected State modelling, residual validation, semantic admissibility, Health Evidence prototypes, and future Evidence Committee design.
+The repository does not claim Marine validity, Marine feasibility, deployment readiness, shipboard remaining-life capability, or completed External Validation.
 
 ## Current Status
 
-Current phase: Phase 2 / H5C preparation.
+Current stage: public repository publishing preparation after Deep Research Blind Review v2 execution-package build.
 
-Completed framework stages include:
+Latest completed milestone:
 
-- Phase 1 Expected State construction and validation
-- Residual bias audit
-- Residual leakage audit
-- Phase 1 scientific review
-- Phase 2 Health Indicator target and evaluation protocol
-- Residual Semantic Admissibility review
-- Semantic Window validation
-- Health Evidence prototype benchmark
-- Evidence Philosophy taxonomy
-- DD-006 Evidence Diversity Principle
+`DEEP_RESEARCH_BLIND_REVIEW_V2_EXECUTION_PACKAGE_READY`
 
-The next planned framework stage is H5C, Evidence Committee Construction.
+Stable completed components:
 
-## Framework Entry Point
+- Marine Package v1.0 is complete and frozen with documented gaps.
+- External Validation definition is approved and frozen.
+- Deep Research Review Package v1.1 is locked.
+- Transport v2 is approved, verified, and frozen as the default LLM Blind Review interface.
+- Blind Review v2 Session Protocol is approved, verified, and frozen.
+- Blind Review v2 execution package is verified and ready for human execution.
 
-Start here:
+Open process states:
 
-[Health Evidence Framework](lbnl_expected_state/docs/architecture/health_evidence_framework.md)
+- External Validation execution: not started.
+- External reviewer: not selected.
+- Evidence package for External Validation: frozen definition, not issued.
+- Deep Research Blind Review execution: not started.
+- Marine request gate: not evaluated.
+- Marine data request: planned, not started.
+- Marine data received: no.
+- Marine validation: not started.
 
-This document is the primary architecture entry point. It explains the current framework pipeline, layered architecture, component responsibilities, validation status, and document dependencies.
+## Start Here
+
+For public readers:
+
+1. [Publishing Status](PUBLISHING_STATUS.md)
+2. [Repository Documentation Map](docs/documentation_map.md)
+3. [Marine Package v1.0](docs/marine_package_v1/marine_package_v1.md)
+4. [External Validation Definition Approval and Freeze Record](docs/external_validation/external_validation_definition_approval_and_freeze_record.md)
+5. [Deep Research Blind Review Execution Package](docs/deep_research_blind_review_execution_v2/README_START_HERE.md)
+
+Website architecture and implementation:
+
+- [Website Architecture Design](docs/website/website_architecture_design.md)
+- [Website Implementation Record v0.1](docs/website/website_implementation_record_v0_1.md)
+- Local site source: `website/`
+
+For framework architecture:
+
+- [Health Evidence Framework](lbnl_expected_state/docs/architecture/health_evidence_framework.md)
+- [Decision Documents](lbnl_expected_state/docs/decisions/)
+- [Dataset Qualification Specification](docs/dataset_qualification_specification.md)
 
 ## Repository Structure
 
 ```text
-lbnl_expected_state/
-  docs/
-    architecture/       Current framework architecture
-    decisions/          Frozen Design Decisions
-    framework/          Framework-level taxonomy
-    gates/              Gate reviews and freeze points
-    phase2/             Phase summaries
-    research_logs/      Exploratory research logs
-    specifications/     Execution specifications
-  outputs/              LBNL experiment and framework outputs
-  scripts/              Experiment scripts
-
 docs/
-  documentation_map.md  Repository documentation navigation map
-  deep research/        Research source material and translations
-  methodology/          Earlier methodology notes
-  exploratory/          Historical exploratory notes
+  documentation_map.md                         Repository navigation map
+  marine_package_v1/                           Frozen Marine Package v1.0
+  external_validation/                         Frozen External Validation definition and templates
+  deep_research_review_package/                Locked Deep Research Review Package v1.1
+  deep_research_review_package_transport_v2/   Frozen Transport v2 review interface
+  deep_research_blind_review_v2/               Frozen Blind Review Session Protocol
+  deep_research_blind_review_execution_v2/     Submission-ready execution package
+  repository_review/                           Repository publishing review records
+
+lbnl_expected_state/
+  docs/                                        Framework architecture, decisions, specifications, gates
+  outputs/                                     Framework outputs and generated artifacts
+  scripts/                                     Framework scripts
+
+src/
+  condition_normalization/
+  expected_state_model/
+  residual/
+  health_index/
+  cusum/
+  legacy and exploratory validation scripts
 
 outputs/
-  Historical and legacy experiment outputs
+  Public-data validation outputs, historical reports, figures, and generated artifacts
 ```
 
-## Documentation Navigation
+## Validation Boundary
 
-Core framework documents:
+The current project uses public datasets and framework records to support technical and architectural learning. Public-data evidence supports bounded statements about residual, Health Evidence, Health Indicator, nonresidual trend, and review-process design routes.
 
-- [Health Evidence Framework](lbnl_expected_state/docs/architecture/health_evidence_framework.md)
-- [Decision Documents](lbnl_expected_state/docs/decisions/)
-- [Evidence Philosophy Taxonomy](lbnl_expected_state/docs/framework/evidence_philosophy_taxonomy.md)
-- [H5 Summary](lbnl_expected_state/docs/phase2/h5_summary.md)
-- [H5C Specification](lbnl_expected_state/docs/specifications/h5c_evidence_committee_spec.md)
-- [Repository Documentation Map](docs/documentation_map.md)
+The following are not established:
 
-Gate reviews:
+- Marine performance.
+- Marine feasibility.
+- Deployment readiness.
+- Shipboard failure prediction.
+- Shipboard remaining useful life.
+- Validated shipboard alarms.
+- Marine data qualification.
+- External Validation completion.
 
-- [Gate M2 Phase 2 Milestone Review](lbnl_expected_state/docs/gates/gate_m2_phase2_milestone_review.md)
-- [Gate M2.5 Prototype Freeze Review](lbnl_expected_state/docs/gates/gate_m2_5_prototype_freeze_review.md)
+## Review and Collaboration Status
 
-## Current Scientific Boundary
+External Validation has a frozen definition and human-reviewer protocol, but execution has not started and no external reviewer has been selected.
 
-The current project has experimentally validated the framework only up to the Evidence Prototype layer using the LBNL validation pipeline.
+Deep Research Blind Review has a verified execution package for ChatGPT and Claude sessions. The package is prepared for human operation, but no Blind Review has been executed by this repository task.
 
-The following remain future work:
+jqhe.uk website v0.1 has been implemented as a static Astro site under `website/`. It is a derived publication layer and is not deployed by this repository task.
 
-- Evidence Committee execution
-- Engineering Review layer
-- Maintenance Decision layer
-- Marine validation
-- Cross-domain validation
-- Production deployment
+Next authorized workstream:
 
-## Personal Notes
+`DEEP_RESEARCH_BLIND_REVIEW_V2_EXECUTION_001`
 
-Chinese review notes, translations, and discussion drafts are retained for personal reference. They are not cleanup targets. For future organization, a separate non-Git workspace is recommended:
+## Reproducibility Notes
 
-```text
-personal_notes/
-  chinese_reviews/
-  deep_research_cn/
-  translations/
-  discussion_notes/
-```
+The repository contains controlled manifests, artifact indexes, review packages, transport manifests, and verification reports. Some historical and exploratory outputs remain in the repository for traceability and are not the current canonical entry points.
+
+Use [docs/documentation_map.md](docs/documentation_map.md) and [PUBLISHING_STATUS.md](PUBLISHING_STATUS.md) to distinguish current authoritative records from historical notes.
+
+
+Repository URL: https://github.com/Jiaquan-Research/ship-health-monitoring
+
+Website note: Cloudflare Pages deployment preparation is available under `website/`; deployment and domain binding are not performed in this repository commit.

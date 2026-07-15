@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import AuthorityBanner from "../../../components/AuthorityBanner.astro";
+import SourceList from "../../../components/SourceList.astro";
+---
+
+<BaseLayout title="Deep Research" description="Deep Research Blind Review interface." breadcrumbs={[{ label: "Projects", href: "/projects" }, { label: "Ship Health Monitoring", href: "/projects/ship-health-monitoring" }, { label: "Deep Research" }]}>
+  <PageHero eyebrow="Deep Research" title="Advisory blind-review interface" summary="Deep Research review packages are delivery interfaces for advisory review. They do not start External Validation or modify frozen records." />
+  <AuthorityBanner ids={["TRV2-GUIDE", "BRV2-SESSION-PROTOCOL", "BRV2-EXEC-PACKAGE-README"]} />
+  <section class="grid">
+    <div class="panel span-6"><h2>Transport v2</h2><p>Reader-oriented packs, lookup indexes, evidence packs, and integrity records for LLM review.</p></div>
+    <div class="panel span-6"><h2>Execution package</h2><p>Prepared delivery copies and prompts for human-operated ChatGPT and Claude sessions.</p></div>
+  </section>
+  <SourceList ids={["TRV2-APPROVAL-FREEZE-RECORD", "BRV2-SESSION-APPROVAL-FREEZE-RECORD", "BRV2-EXEC-PACKAGE-VERIFICATION"]} title="Review governance records" />
+</BaseLayout>

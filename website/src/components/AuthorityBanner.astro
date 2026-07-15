@@ -1,0 +1,26 @@
+---
+import Badges from "./Badges.astro";
+import { byId, sourceHref } from "../lib/manifest";
+
+interface Props {
+  ids: string[];
+  note?: string;
+}
+
+const { ids, note = "This page is a derived website view. Source authority remains in the linked repository records." } = Astro.props;
+const docs = ids.map((id) => byId(id, id.startsWith("DRPKG") ? "repository" : "public"));
+---
+
+<section class="authority" aria-label="Authority banner">
+  <h2>Authority</h2>
+  <p>{note}</p>
+  <ul class="doc-list">
+    {docs.map((doc) => (
+      <li>
+        <div class="doc-title"><a href={sourceHref(doc)}>{doc.title}</a></div>
+        <div class="doc-path">{doc.document_id} · {doc.path}</div>
+        <Badges entry={doc} />
+      </li>
+    ))}
+  </ul>
+</section>
