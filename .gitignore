@@ -62,3 +62,13 @@ outputs/validation_b21_residuals.csv
 # Duplicate Word exports kept locally; canonical tracked file is outputs/claim_registry_v0.1.docx.
 docs/claim_registry_v0.1_1.docx
 outputs/claim_registry_v0.1_1.docx
+# Website build and local install artifacts
+website/node_modules/
+website/dist/
+website/.npm-cache/
+website/.astro/
+
+# Environment files
+.env
+.env.*
+!.env.example

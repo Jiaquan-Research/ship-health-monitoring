@@ -1,75 +1,72 @@
 # System State
 
-Current phase: Phase 2 / H5C preparation.
+Current date of this status update: 2026-07-15
 
-Current framework status: Health Evidence framework architecture draft completed. The project is preparing for Gate M3 Framework Audit.
+## Current Project Stage
 
-## Current Framework
+Repository publishing preparation.
 
-The canonical framework entry point is:
+The repository is being prepared as the authoritative public representation of the current project state. This update does not change scientific conclusions, validation evidence, frozen claims, frozen gaps, or process-state decisions.
 
-[Health Evidence Framework](lbnl_expected_state/docs/architecture/health_evidence_framework.md)
+## Current Canonical State
 
-Current architecture:
+Marine Package v1.0:
 
-```text
-Raw Operational Data
--> Dataset Qualification
--> Expected State Model
--> Residual Generation
--> Statistical Validity
--> Semantic Admissibility
--> Candidate Health Evidence
--> Evidence Prototype
--> Evidence Committee
--> Engineering Review
--> Maintenance Decision
-```
+- State: complete and frozen.
+- Document: [docs/marine_package_v1/marine_package_v1.md](docs/marine_package_v1/marine_package_v1.md)
+- Marine validity: not claimed.
+- Marine data request: planned, not started.
 
-Only stages up to Evidence Prototype have been experimentally validated in the current project.
+External Validation definition:
 
-## Major Completed Milestones
+- State: approved and frozen.
+- External Validation execution: not started.
+- External reviewer: not selected.
+- Evidence package: frozen definition, not issued.
+- Marine request gate: not evaluated.
+- Approval record: [docs/external_validation/external_validation_definition_approval_and_freeze_record.md](docs/external_validation/external_validation_definition_approval_and_freeze_record.md)
 
-- Phase 1 Expected State construction
-- Phase 1 Residual Bias Audit
-- Phase 1 Residual Leakage Audit
-- Phase 1 Scientific Review
-- H0 Health Indicator Design Target Review
-- H1 Health Indicator Evaluation Protocol
-- H2 Candidate Health Indicator Construction
-- H3 Residual Semantic Admissibility Review
-- H4 Semantic Window validation
-- H5A Health Indicator Method Taxonomy
-- H5B Health Evidence Prototype Benchmark
-- Gate M2 Residual Evidence Framework Freeze
-- Gate M2.5 Prototype Freeze Review
+Deep Research Blind Review:
 
-## Current Decision Documents
+- Review Package v1.1: locked.
+- Transport v2: approved, verified, and frozen.
+- Session Protocol: approved, verified, and frozen.
+- Execution package: verified and ready.
+- Blind Review execution: not started.
+- Operator entry point: [docs/deep_research_blind_review_execution_v2/README_START_HERE.md](docs/deep_research_blind_review_execution_v2/README_START_HERE.md)
 
-- [DD-002 Residual Evidence Hierarchy](lbnl_expected_state/docs/decisions/DD-002_residual_evidence_hierarchy.md)
-- [DD-003 Project Terminology Standard](lbnl_expected_state/docs/decisions/DD-003_project_terminology_standard.md)
-- [DD-004 Semantic Window Validation](lbnl_expected_state/docs/decisions/DD-004_semantic_window_validation.md)
-- [DD-005 Stateful Health Indicator Lifecycle](lbnl_expected_state/docs/decisions/DD-005_stateful_health_indicator_lifecycle.md)
-- [DD-006 Evidence Diversity Principle](lbnl_expected_state/docs/decisions/DD-006_evidence_diversity_principle.md)
+## Stable Components
 
-## Current H5 Status
+- Health Evidence framework architecture.
+- Framework decision documents DD-002 through DD-006.
+- Dataset Qualification Specification.
+- Marine Package v1.0 package, evidence map, artifact index, gap register, completion review, and freeze manifest.
+- External Validation definition artifacts and freeze manifest.
+- Deep Research Review Package v1.1.
+- Transport v2 reading, lookup, evidence, and integrity layers.
+- Blind Review v2 Session Protocol and active append-only execution observation log.
 
-H5B has completed the first-round Health Evidence prototype benchmark.
+## Open States
 
-H5C is the next planned execution stage. Its specification is:
+- External Validation execution: `NOT_STARTED`
+- External reviewer: `NOT_SELECTED`
+- Deep Research Blind Review execution: not started
+- Marine request gate: `MARINE_REQUEST_GATE_NOT_EVALUATED`
+- Marine data request: `PLANNED_NOT_STARTED`
+- Marine data received: No
+- Marine validation: Not started
+- Deployment readiness: Not demonstrated
 
-[H5C Evidence Committee Specification](lbnl_expected_state/docs/specifications/h5c_evidence_committee_spec.md)
+## Current Boundary
 
-H5C will evaluate Evidence Committee behaviour using validated Evidence Philosophies. It will not introduce new Health Evidence families, optimize algorithms, or perform maintenance decision automation.
+The project is not a deployed monitoring product. It is a research and evidence-governance repository.
 
-## Known Future Work
+Public-data validation and framework records support bounded technical learning only. They do not establish Marine applicability, Marine feasibility, shipboard failure prediction, shipboard remaining-life prediction, validated shipboard alarms, or deployment approval.
 
-- Execute H5C Evidence Committee Construction
-- Complete Gate M3 Framework Audit
-- Develop Evidence Committee review methodology
-- Validate the framework on additional datasets
-- Perform future marine validation
-- Define Engineering Review layer
-- Define Maintenance Decision layer
-- Develop lifecycle and maintenance-state integration
-- Establish cross-domain validation evidence
+## Current Next Work
+
+The next authorized operational workstream recorded by the Blind Review execution package is:
+
+`DEEP_RESEARCH_BLIND_REVIEW_V2_EXECUTION_001`
+
+This workstream is not started by this publishing-preparation update.

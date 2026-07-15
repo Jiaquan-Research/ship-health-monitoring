@@ -1,0 +1,186 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f8f5;
+  --panel: #ffffff;
+  --ink: #18211f;
+  --muted: #5d6864;
+  --line: #d9ded8;
+  --accent: #0f6b63;
+  --accent-2: #a6412b;
+  --soft: #e9f1ee;
+  --warn: #fff0d9;
+  --radius: 8px;
+  --max: 1180px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:focus-visible, button:focus-visible { outline: 3px solid #65b8b0; outline-offset: 3px; }
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,0.94);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-wrap, main, .footer-inner {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.nav-wrap {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand { font-weight: 760; color: var(--ink); text-decoration: none; }
+
+.global-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.global-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.94rem;
+}
+
+.global-nav a:hover { background: var(--soft); }
+
+main { padding: 28px 0 54px; }
+
+.breadcrumb { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+.breadcrumb a { color: var(--muted); }
+
+.hero {
+  padding: 34px 0 24px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: var(--accent);
+  font-weight: 750;
+  font-size: 0.78rem;
+}
+
+h1 {
+  max-width: 860px;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  line-height: 1.04;
+  margin: 10px 0 14px;
+  letter-spacing: 0;
+}
+
+h2 { font-size: 1.45rem; margin: 0 0 14px; }
+h3 { margin: 0 0 8px; }
+p { max-width: 860px; }
+
+.summary {
+  font-size: 1.12rem;
+  color: #33403c;
+  max-width: 900px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+
+.span-4 { grid-column: span 4; }
+.span-6 { grid-column: span 6; }
+.span-8 { grid-column: span 8; }
+.span-12 { grid-column: span 12; }
+
+.panel, .authority, .status-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.authority {
+  border-left: 5px solid var(--accent);
+  margin: 22px 0;
+}
+
+.warning {
+  background: var(--warn);
+  border-color: #e6c88e;
+}
+
+.badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--soft);
+  border: 1px solid #c9d9d4;
+  color: #22332f;
+  font-size: 0.8rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.badge.warn { background: #fff4e6; border-color: #e9caa2; color: #5d321d; }
+.badge.strong { background: #e5f3ef; border-color: #9ccdc3; color: #0d554f; }
+
+.doc-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.doc-list li { border-top: 1px solid var(--line); padding-top: 12px; }
+.doc-title { font-weight: 730; }
+.doc-path { color: var(--muted); font-size: 0.88rem; overflow-wrap: anywhere; }
+
+.card-link {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  min-height: 100%;
+}
+.card-link:hover .panel { border-color: #91bdb6; }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  color: var(--muted);
+  background: #fff;
+}
+
+.footer-inner { display: flex; gap: 16px; justify-content: space-between; flex-wrap: wrap; }
+.footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
+
+table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid var(--line); }
+th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 10px; vertical-align: top; }
+th { background: var(--soft); }
+code { background: #edf1ed; padding: 2px 4px; border-radius: 4px; }
+
+@media (max-width: 760px) {
+  .nav-wrap { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+  .global-nav { justify-content: flex-start; }
+  .span-4, .span-6, .span-8 { grid-column: span 12; }
+  h1 { font-size: 2.1rem; }
+}

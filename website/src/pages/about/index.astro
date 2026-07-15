@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import AuthorityBanner from "../../components/AuthorityBanner.astro";
+---
+
+<BaseLayout title="About" description="About the jqhe.uk public research portal." breadcrumbs={[{ label: "About" }]}>
+  <PageHero eyebrow="About" title="About jqhe.uk" summary="jqhe.uk is a public-facing view of a research and evidence-governance repository." />
+  <AuthorityBanner ids={["ROOT-README", "ROOT-PUBLISHING-STATUS"]} />
+  <section class="grid">
+    <div class="panel span-6"><h2>Audience</h2><p>Public visitors, technical collaborators, external reviewers, and AI agents.</p></div>
+    <div class="panel span-6 warning"><h2>Boundary</h2><p>The site does not establish Marine validity, deployment readiness, or External Validation completion.</p></div>
+  </section>
+</BaseLayout>

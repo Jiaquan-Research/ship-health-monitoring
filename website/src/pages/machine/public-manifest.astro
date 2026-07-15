@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { publicManifest } from "../../lib/manifest";
+const manifest = publicManifest();
+---
+
+<BaseLayout title="Public Manifest" description="Public manifest metadata view." breadcrumbs={[{ label: "Machine Access", href: "/machine" }, { label: "Public Manifest" }]}>
+  <PageHero eyebrow="Manifest" title="Public Manifest" summary="Public-safe subset used by website pages by default." />
+  <section class="panel">
+    <h2>Metadata</h2>
+    <p>Entries: <code>{manifest.entries.length}</code> · Exclusion rule: {manifest.exclusion_rule}</p>
+    <p><a href="/manifests/public_manifest.json">Download public_manifest.json</a></p>
+  </section>
+  <table>
+    <thead><tr><th>ID</th><th>Title</th><th>Visibility</th><th>Priority</th></tr></thead>
+    <tbody>{manifest.entries.slice(0, 30).map((entry) => <tr><td>{entry.document_id}</td><td>{entry.title}</td><td>{entry.public_visibility}</td><td>{entry.retrieval_priority}</td></tr>)}</tbody>
+  </table>
+</BaseLayout>

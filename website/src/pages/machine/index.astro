@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import AuthorityBanner from "../../components/AuthorityBanner.astro";
+import RelatedPages from "../../components/RelatedPages.astro";
+import { machineManifest } from "../../lib/manifest";
+const manifest = machineManifest();
+---
+
+<BaseLayout title="Machine Access" description="Manifest-driven machine access and retrieval rules." breadcrumbs={[{ label: "Machine Access" }]}>
+  <PageHero eyebrow="Machine interface" title="Machine Access" summary="Stable manifests and retrieval rules for Deep Research, Codex, Claude, and future agents." />
+  <AuthorityBanner ids={["GOV-MACHINE-RETRIEVAL-POLICY", "MANIFEST-README"]} />
+  <section class="panel warning">
+    <h2>Retrieval warning</h2>
+    <p>{manifest.warnings[0]}</p>
+    <p>{manifest.warnings[1]}</p>
+  </section>
+  <RelatedPages links={[
+    { label: "Repository Manifest", href: "/machine/manifest", text: "Full governed document metadata." },
+    { label: "Public Manifest", href: "/machine/public-manifest", text: "Public-safe subset for website content." },
+    { label: "Machine Retrieval Manifest", href: "/machine/retrieval-manifest", text: "Curated retrieval order and warnings." },
+    { label: "Governance Vocabularies", href: "/machine/governance", text: "Authority, lifecycle, copy-role, and priority definitions." }
+  ]} />
+</BaseLayout>

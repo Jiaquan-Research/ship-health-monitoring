@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { repositoryManifest } from "../../lib/manifest";
+const manifest = repositoryManifest();
+---
+
+<BaseLayout title="Repository Manifest" description="Repository manifest metadata view." breadcrumbs={[{ label: "Machine Access", href: "/machine" }, { label: "Repository Manifest" }]}>
+  <PageHero eyebrow="Manifest" title="Repository Manifest" summary="Full governed core document set. This metadata is not scientific evidence." />
+  <section class="panel">
+    <h2>Metadata</h2>
+    <p>Type: <code>{manifest.manifest_type}</code> · Version: <code>{manifest.version}</code> · Entries: <code>{manifest.entries.length}</code></p>
+    <p><a href="/manifests/repository_manifest.json">Download repository_manifest.json</a></p>
+  </section>
+  <table>
+    <thead><tr><th>ID</th><th>Title</th><th>Authority</th><th>Lifecycle</th><th>Copy role</th></tr></thead>
+    <tbody>{manifest.entries.slice(0, 30).map((entry) => <tr><td>{entry.document_id}</td><td>{entry.title}</td><td>{entry.authority_level}</td><td>{entry.lifecycle_state}</td><td>{entry.copy_role}</td></tr>)}</tbody>
+  </table>
+</BaseLayout>

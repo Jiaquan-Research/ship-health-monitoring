@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import AuthorityBanner from "../../components/AuthorityBanner.astro";
+import SourceList from "../../components/SourceList.astro";
+---
+
+<BaseLayout title="Deep Research Review" description="Deep Research Blind Review workflow and package links." breadcrumbs={[{ label: "Review Portal", href: "/review" }, { label: "Deep Research" }]}>
+  <PageHero eyebrow="Advisory review" title="Deep Research Blind Review" summary="The execution package is ready for human-operated sessions. The review itself has not started." />
+  <AuthorityBanner ids={["BRV2-EXEC-PACKAGE-README", "BRV2-EXEC-PACKAGE-MANIFEST", "BRV2-SESSION-PROTOCOL"]} />
+  <section class="grid">
+    <div class="panel span-6"><h2>Transport versus execution copy</h2><p>Transport v2 is the review interface. Execution package files are upload-ready delivery copies for a specific session protocol.</p></div>
+    <div class="panel span-6 warning"><h2>Boundary</h2><p>Deep Research findings are advisory and do not modify frozen claims, gaps, or process state.</p></div>
+  </section>
+  <SourceList ids={["TRV2-GUIDE", "TRV2-INTEGRITY-MANIFEST", "BRV2-EXEC-PACKAGE-VERIFICATION"]} />
+</BaseLayout>

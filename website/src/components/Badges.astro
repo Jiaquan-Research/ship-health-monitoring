@@ -1,0 +1,17 @@
+---
+import { formatLabel, type ManifestEntry } from "../lib/manifest";
+
+interface Props {
+  entry?: ManifestEntry;
+  labels?: string[];
+}
+
+const { entry, labels = [] } = Astro.props;
+const values = entry
+  ? [entry.authority_level, entry.lifecycle_state, entry.copy_role, entry.public_visibility]
+  : labels;
+---
+
+<div class="badge-row" aria-label="Document metadata">
+  {values.map((value) => <span class:list={["badge", value.includes("FROZEN") || value.includes("AUTHORITY") ? "strong" : "", value.includes("NOT") ? "warn" : ""]}>{formatLabel(value)}</span>)}
+</div>

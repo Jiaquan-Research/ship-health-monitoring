@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import AuthorityBanner from "../../../components/AuthorityBanner.astro";
+import SourceList from "../../../components/SourceList.astro";
+---
+
+<BaseLayout title="Framework Architecture" description="Health Evidence framework architecture." breadcrumbs={[{ label: "Projects", href: "/projects" }, { label: "Ship Health Monitoring", href: "/projects/ship-health-monitoring" }, { label: "Framework" }]}>
+  <PageHero eyebrow="Framework" title="Health Evidence Framework" summary="Architecture and design decisions for Expected State, residual, Health Evidence, and Health Indicator routes." />
+  <AuthorityBanner ids={["HEF-ARCHITECTURE", "DD-002", "DD-003"]} />
+  <SourceList ids={["DD-004", "DD-005", "DD-006", "DATASET-QUAL-SPEC"]} title="Decision and specification records" />
+</BaseLayout>

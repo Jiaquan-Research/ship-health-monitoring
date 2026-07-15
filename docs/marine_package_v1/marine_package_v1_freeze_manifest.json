@@ -1,0 +1,78 @@
+{
+  "manifest_id": "MARINE_PACKAGE_V1_FREEZE_MANIFEST",
+  "package": "Marine Package v1.0",
+  "package_version": "v1.0",
+  "document_status": "Frozen",
+  "completion_state": "MARINE_PACKAGE_V1_COMPLETED_WITH_DOCUMENTED_GAPS",
+  "freeze_state": "MARINE_PACKAGE_V1_FROZEN",
+  "marine_validity": "NOT_CLAIMED",
+  "external_validation_status": "PLANNED_INCOMPLETE",
+  "marine_request_status": "PLANNED_NOT_STARTED",
+  "claim_count": 40,
+  "gap_count": 27,
+  "package_blockers": 0,
+  "external_validation_blockers": 2,
+  "marine_request_blockers": 2,
+  "marine_validation_blockers": 6,
+  "deployment_blockers": 11,
+  "files": [
+    {
+      "path": "docs/marine_package_v1/marine_package_v1.md",
+      "role": "Package narrative",
+      "status": "Frozen",
+      "sha256": "23D1DDC1DBCB2AB062B15857CC5547C0D1AA3E04C043CB45907F7AAFB5A7CEEB"
+    },
+    {
+      "path": "docs/marine_package_v1/marine_package_v1_structure.md",
+      "role": "Frozen framework structure",
+      "status": "Frozen",
+      "sha256": "1493AC04687AEB1F81A9F7C46AAF48C28E4BB487E15D7F85025F1FBD84320BEB"
+    },
+    {
+      "path": "docs/marine_package_v1/marine_package_v1_claim_boundary.md",
+      "role": "Frozen claim boundary",
+      "status": "Frozen",
+      "sha256": "EB16CD25E6FC9BFAEF9001142376C47BA17140684B9A9B1B08898F93984E49B6"
+    },
+    {
+      "path": "docs/marine_package_v1/marine_package_v1_evidence_map.csv",
+      "role": "Reviewed evidence map",
+      "status": "Reviewed",
+      "sha256": "4171CCB7D24C09140EE4CE7BBE6A084200612A957D47037AA6E024E936C9A06A"
+    },
+    {
+      "path": "docs/marine_package_v1/marine_package_v1_artifact_index.md",
+      "role": "Artifact index",
+      "status": "Reviewed",
+      "sha256": "POST_FREEZE_INDEX_HASH_RECORDED_SEPARATELY"
+    },
+    {
+      "path": "docs/marine_package_v1/marine_package_v1_gap_register.md",
+      "role": "Reviewed gap register",
+      "status": "Reviewed",
+      "sha256": "B3D11617EE21E1396971EF1D2C1B0BF2E3E1808BAC727864305337ECA946B4AF"
+    },
+    {
+      "path": "docs/marine_package_v1/marine_package_v1_completion_review.md",
+      "role": "Completion review",
+      "status": "Reviewed",
+      "sha256": "38E0869E79B6E9C68938A794B3F666F96194DA27826EEEA0A47F34E703240D98"
+    },
+    {
+      "path": "docs/documentation_map.md",
+      "role": "Documentation map",
+      "status": "Active",
+      "sha256": "79540AF49171E5D786E6DB51ED70FF420E34C3580C1A44A858252E9B2E201678"
+    }
+  ],
+  "freeze_rules": [
+    "No claim ID renumbering.",
+    "No claim meaning changes without formal amendment.",
+    "No gap removal without reviewed closure.",
+    "No Marine claim without reviewed Marine evidence.",
+    "No deployment claim without deployment validation.",
+    "No request-start claim before both prerequisites are complete.",
+    "All substantive changes require version increment and hash refresh."
+  ],
+  "next_authorized_workstream": "EXTERNAL_VALIDATION_OF_PROJECT_RESULTS_DEFINITION_001"
+}

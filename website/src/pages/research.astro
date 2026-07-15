@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import AuthorityBanner from "../components/AuthorityBanner.astro";
+import RelatedPages from "../components/RelatedPages.astro";
+import SourceList from "../components/SourceList.astro";
+---
+
+<BaseLayout title="Research" description="Research overview and framework routes." breadcrumbs={[{ label: "Research" }]}>
+  <PageHero eyebrow="Research" title="Evidence-boundary research" summary="The project uses public datasets and framework records to support bounded technical learning, not Marine validation or deployment claims." />
+  <AuthorityBanner ids={["MPV1-PACKAGE", "HEF-ARCHITECTURE"]} />
+  <section class="grid">
+    <div class="panel span-6"><h2>Research scope</h2><p>Residual, Health Evidence, Health Indicator, nonresidual trend, and governance-review routes are documented as public-data learning and preparation work.</p></div>
+    <div class="panel span-6 warning"><h2>Boundary</h2><p>Public-data evidence does not establish Marine performance, Marine feasibility, shipboard alarms, deployment readiness, or RUL capability.</p></div>
+  </section>
+  <RelatedPages links={[
+    { label: "Framework", href: "/projects/ship-health-monitoring/framework", text: "Architecture and decision records." },
+    { label: "Validation", href: "/projects/ship-health-monitoring/validation", text: "Public dataset validation roles and limitations." },
+    { label: "Marine Package", href: "/projects/ship-health-monitoring/marine-package", text: "Frozen package and documented gaps." }
+  ]} />
+  <SourceList ids={["HEF-ARCHITECTURE", "DATASET-QUAL-SPEC", "MPV1-PACKAGE"]} />
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+import Badges from "./Badges.astro";
+import { byId, sourceHref } from "../lib/manifest";
+
+interface Props {
+  ids: string[];
+  title?: string;
+}
+
+const { ids, title = "Source documents" } = Astro.props;
+const docs = ids.map((id) => byId(id, id.startsWith("DRPKG") ? "repository" : "public"));
+---
+
+<section class="panel span-12">
+  <h2>{title}</h2>
+  <ul class="doc-list">
+    {docs.map((doc) => (
+      <li>
+        <div class="doc-title"><a href={sourceHref(doc)}>{doc.title}</a></div>
+        <div class="doc-path">{doc.path}</div>
+        <Badges entry={doc} />
+      </li>
+    ))}
+  </ul>
+</section>

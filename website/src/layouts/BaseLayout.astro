@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  breadcrumbs?: { label: string; href?: string }[];
+}
+
+const { title, description, breadcrumbs = [] } = Astro.props;
+const nav = [
+  ["Status", "/status"],
+  ["Research", "/research"],
+  ["Projects", "/projects"],
+  ["Review Portal", "/review"],
+  ["Machine Access", "/machine"],
+  ["Governance", "/governance"],
+  ["About", "/about"]
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | jqhe.uk</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/">jqhe.uk</a>
+        <nav class="global-nav" aria-label="Global navigation">
+          {nav.map(([label, href]) => <a href={href}>{label}</a>)}
+        </nav>
+      </div>
+    </header>
+    <main>
+      {breadcrumbs.length > 0 && (
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          {breadcrumbs.map((crumb) => (
+            <>
+              <span> / </span>
+              {crumb.href ? <a href={crumb.href}>{crumb.label}</a> : <span>{crumb.label}</span>}
+            </>
+          ))}
+        </nav>
+      )}
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Derived public research portal. Website pages are not source authority.</span>
+        <div class="footer-links">
+          <a href="/machine">Machine Access</a>
+          <a href="/manifests/public_manifest.json">Public Manifest</a>
+          <a href="/governance">Governance</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

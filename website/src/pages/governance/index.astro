@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import AuthorityBanner from "../../components/AuthorityBanner.astro";
+import SourceList from "../../components/SourceList.astro";
+---
+
+<BaseLayout title="Governance" description="Repository governance and publishing policies." breadcrumbs={[{ label: "Governance" }]}>
+  <PageHero eyebrow="Governance" title="Repository governance" summary="Authority hierarchy, publication rules, machine retrieval policy, and manifest-first governance." />
+  <AuthorityBanner ids={["GOV-REPOSITORY-POLICY", "GOV-PUBLISHING-POLICY", "GOV-MACHINE-RETRIEVAL-POLICY"]} />
+  <section class="panel warning"><h2>Website authority boundary</h2><p>Website pages are derived public views. They are never scientific or governance authorities.</p></section>
+  <SourceList ids={["REPO-PUBLISHING-REVIEW", "REPO-GOVERNANCE-REVIEW", "WEBSITE-CONTENT-MAP"]} title="Repository review and planning records" />
+</BaseLayout>

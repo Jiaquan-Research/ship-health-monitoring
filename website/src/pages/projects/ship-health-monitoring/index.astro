@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import AuthorityBanner from "../../../components/AuthorityBanner.astro";
+import StatusGrid from "../../../components/StatusGrid.astro";
+import RelatedPages from "../../../components/RelatedPages.astro";
+---
+
+<BaseLayout title="Ship Health Monitoring" description="Ship Health Monitoring project overview." breadcrumbs={[{ label: "Projects", href: "/projects" }, { label: "Ship Health Monitoring" }]}>
+  <PageHero eyebrow="Project" title="Ship Health Monitoring" summary="A traceable research and governance package for future Marine validation preparation." />
+  <AuthorityBanner ids={["MPV1-PACKAGE", "ROOT-SYSTEM-STATE"]} />
+  <StatusGrid />
+  <RelatedPages links={[
+    { label: "Marine Package", href: "/projects/ship-health-monitoring/marine-package", text: "Frozen package and documented gaps." },
+    { label: "Evidence Boundaries", href: "/projects/ship-health-monitoring/boundaries", text: "Claims, gaps, evidence limits, and prohibited overclaims." },
+    { label: "External Validation", href: "/projects/ship-health-monitoring/external-validation", text: "Frozen human-reviewer definition; execution not started." },
+    { label: "Deep Research", href: "/projects/ship-health-monitoring/deep-research", text: "Advisory blind-review interface and execution package." },
+    { label: "Framework", href: "/projects/ship-health-monitoring/framework", text: "Health Evidence architecture and decision documents." },
+    { label: "Validation", href: "/projects/ship-health-monitoring/validation", text: "Public-data validation roles." }
+  ]} />
+</BaseLayout>

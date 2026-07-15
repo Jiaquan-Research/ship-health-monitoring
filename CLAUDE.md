@@ -1,226 +1,75 @@
-# Ship Health Monitoring - Project State
+# Ship Health Monitoring - Agent Context
 
-## Project Goal
-Build a ship system health hierarchy monitoring system.
-Technical pipeline: Condition Normalization -> Expected State Model -> Residual -> Health Index -> Trend/Margin
+This file summarizes the current repository state for AI assistants and repository operators. It is not a scientific evidence artifact and does not override frozen package records.
 
-## Current Phase
-Phase 1: LBNL Chiller Plant dataset validation (Pipeline Validation B1)
+## Current State
 
-## Validation Targets
-- B1 (LBNL): Can the pipeline run end-to-end?
-- B2 (RP-1043): Does HI have physical meaning (monotonicity with fault severity)?
-- C (Marine): Can trend detection precede alarms on real ship data?
+Current stage: repository publishing preparation after Blind Review v2 execution-package build.
 
-## Today's Target
-Answer: Can Condition Variables sufficiently predict Expected State?
+Latest completed milestone:
 
-## Key Design Decisions
-- Condition Variables: external/load inputs that drive system behavior
-- State Variables: system response outputs that reflect health
-- Residual = Observed - Predicted (after condition normalization)
-- XGBoost for Expected State Model v0 (VIB deferred to later stage)
+`DEEP_RESEARCH_BLIND_REVIEW_V2_EXECUTION_PACKAGE_READY`
 
-## File Structure
-- data/lbnl/         : LBNL FDD Chiller Plant dataset
-- src/               : source modules
-- outputs/           : audit reports, model outputs, figures
-- docs/              : variable mapping, design decisions
+## Canonical Public Entry Points
 
-## Status Log
-- [ ] Task 1: Project initialization
-- [ ] Task 2: LBNL data audit
-- [ ] Task 3: Variable mapping frozen
-- [ ] Task 4: Expected State Model spike
-- [ ] Task 5: Residual output + normal/fault separation
-- [x] Validation B1 Expected State Model
-- [x] Validation B1 Residual Baseline Pipeline
+- [README](README.md)
+- [Publishing Status](PUBLISHING_STATUS.md)
+- [Documentation Map](docs/documentation_map.md)
+- [Marine Package v1.0](docs/marine_package_v1/marine_package_v1.md)
+- [External Validation Definition Approval and Freeze Record](docs/external_validation/external_validation_definition_approval_and_freeze_record.md)
+- [Deep Research Blind Review Execution Package README](docs/deep_research_blind_review_execution_v2/README_START_HERE.md)
 
-## Frozen HVAC Variable Mapping v1
+## Process Boundaries
 
-Condition Variables:
+Do not state or imply:
 
-- CWL_SEC_LOAD
-- OA_TEMP
-- OA_TEMP_WB
-- CWL_PRI_SW_TEMPSPT
-- CT_SW_TEMPSPT
-- CWL_SEC_DPSPT
+- Marine validity has been established.
+- Marine feasibility has been established.
+- Deployment readiness has been demonstrated.
+- Shipboard RUL capability has been validated.
+- External Validation has started or completed.
+- An External Reviewer has been selected.
+- Marine data has been requested, received, or qualified.
 
-State Variables:
+Current process states:
 
-- CHL_POW_1
-- CHL_SW_TEMP_1
-- CT_SW_TEMP_1
-- CHL_RWCD_TEMP_1
+- Marine Package v1.0: complete and frozen.
+- External Validation definition: approved and frozen.
+- External Validation execution: not started.
+- External reviewer: not selected.
+- Deep Research Blind Review execution: not started.
+- Marine request gate: not evaluated.
+- Marine data request: planned, not started.
+- Marine validation: not started.
 
-Domain:
+Next authorized workstream:
 
-HVAC (LBNL Chiller Plant)
+`DEEP_RESEARCH_BLIND_REVIEW_V2_EXECUTION_001`
 
-Status:
+## Repository Layout
 
-Validation B1 Complete
+```text
+docs/marine_package_v1/                         Frozen Marine Package v1.0
+docs/external_validation/                       Frozen External Validation definition
+docs/deep_research_review_package/              Locked Deep Research Review Package v1.1
+docs/deep_research_review_package_transport_v2/ Frozen Transport v2
+docs/deep_research_blind_review_v2/             Frozen Session Protocol
+docs/deep_research_blind_review_execution_v2/   Verified execution package
+lbnl_expected_state/                            Framework architecture, decisions, outputs, scripts
+src/                                            Source and exploratory validation scripts
+outputs/                                        Public-data outputs and historical generated artifacts
+```
 
-## Research Conclusion
+## Editing Rules
 
-Condition Variables can predict State Variables with high accuracy.
+Do not modify frozen Marine Package, External Validation, Transport v2, Session Protocol, claim, gap, or evidence artifacts unless a task card explicitly authorizes that exact change.
 
-Expected State route supported.
+For publication-readiness work, prefer updating public navigation and status documents rather than rewriting research artifacts.
 
-Residual baseline established.
+## Manifest and Retrieval Rules
 
-Domain Transfer Risk remains open.
+Use [SYSTEM_STATE.md](SYSTEM_STATE.md) as the current-state authority.
 
-Marine validation NOT completed.
+Use [manifest/repository_manifest.json](manifest/repository_manifest.json) to check document authority, lifecycle, visibility, retrieval priority, and source/copy role.
 
-## Next
-
-Validation B2
-
-Use:
-
-- coolingtower_fouling_065
-- coolingtower_fouling_080
-- coolingtower_fouling_095
-
-Question:
-
-Does residual magnitude increase monotonically with fault severity?
-
-## Validation B2 Result
-
-Status:
-
-FAIL
-
-Key findings:
-
-- Frozen Validation B1 Expected State Models were applied without retraining.
-- Cooling-tower fouling residuals did not increase monotonically under the requested Baseline -> 065 -> 080 -> 095 ordering.
-- No target passed strict or relaxed monotonicity using AbsMean, RMS, or P95.
-- `CT_SW_TEMP_1` had the strongest sensitivity score, but the response was not monotonic.
-- The tested residual metrics do not yet support Expected State -> Residual -> Degradation for this fault family.
-
-Implication:
-
-A simple HI_v0 is not justified from this B2 result alone.
-
-Next action:
-
-Audit the physical meaning of fouling severity labels and confirm whether lower fouling factor values represent more severe degradation before redesigning HI_v0.
-
-## Validation B2.1 Result
-
-Status:
-
-PASS - Strong PASS
-
-Corrected severity ordering:
-
-Baseline -> 095 -> 080 -> 065
-
-Key findings:
-
-- B2 diagnosis showed 095 is weakest fouling, 080 is moderate fouling, and 065 is strongest fouling.
-- Frozen Validation B1 Expected State Models were reused without retraining.
-- All 4 targets showed strict monotonicity for AbsMean, RMS, and P95 under corrected ordering.
-- Most sensitive target: `CT_SW_TEMP_1`.
-- Sensitivity ranking: `CT_SW_TEMP_1`, `CHL_RWCD_TEMP_1`, `CHL_SW_TEMP_1`, `CHL_POW_1`.
-- Expected State -> Residual -> Physical Degradation is preliminarily supported for LBNL cooling-tower fouling.
-- Q2 of the Concept Paper can be marked Preliminary Supported with the caveat that evidence is HVAC-domain and label-order dependent.
-
-## HI_v0 Validation
-
-Status:
-
-PASS - Moderate PASS
-
-Best target:
-
-CT_SW_TEMP_1
-
-Best window:
-
-W = 6h
-
-Q3 status:
-
-Preliminary Supported
-
-Key findings:
-
-- HI_v0 was computed only from frozen B2.1 normalized residuals.
-- No residuals were recomputed and no Expected State Models were retrained.
-- HI_v0A (`CT_SW_TEMP_1`) showed the strongest sensitivity and clear monotonic response.
-- Primary 24h window showed monotonic HI_mean for all 4 targets.
-- HI_v0 improved sensitivity over raw residual RMS mainly for `CT_SW_TEMP_1`; broader improvement across all targets was not demonstrated.
-- Q3 is Preliminary Supported for HVAC-domain single-variable HI construction, with marine transfer still unvalidated.
-
-## Validation B4 Residual Trend Audit
-
-Status:
-
-PASS - Strong PASS
-
-Q4a status:
-
-Initial Evidence
-
-Best trend metric:
-
-RMS
-
-Targets with reliable trend:
-
-4/4
-
-Key findings:
-
-- B4 used frozen Validation B2.1 residuals only.
-- No residuals were recomputed and no Expected State Models were retrained.
-- Stage order: Baseline -> 095 -> 080 -> 065.
-- All 4 targets showed strict monotonicity for AbsMean, RMS, P95, P99, and Std.
-- Spearman rho = 1.0 for all target/metric combinations.
-- HI_v0 Rolling RMS 24h improved the CT_SW_TEMP_1 strongest-vs-baseline trend ratio over raw residual RMS.
-- Residual -> Trend exists in the HVAC pseudo-degradation path; Q4a can be marked Initial Evidence.
-
----
-
-## Validation C0 Series — FROZEN (2026-06-06)
-
-### C0: N-CMAPSS Surrogate Spike
-Result: Weak Evidence (Ground Truth issue)
-Finding: HPC_eff_mod = 0 in DS02-006, Spearman undefined
-
-### C0.1: Label Audit
-Result: Diagnosis complete
-Finding: DS02-006 is HPT fault type. Use HPT_eff_mod.
-
-### C0.2: Ground Truth Aligned Rerun
-Result: STRONG PASS
-T50 Held-out R²: 0.992~0.996
-Residual |Spearman|: 0.772~0.826
-HI |Spearman|: 0.951~0.994
-HI B/A Ratio: 8.5~12.3x
-Best target: T50 (HPT outlet temp)
-Best window: W=5 cycles
-Early detection: ~20-29% lifecycle
-
-### Cross-Domain Evidence Status
-Q1: Strong Evidence (HVAC + Aero Engine)
-Q2: Strong Evidence (HVAC + Aero Engine)
-Q3: Moderate Evidence (HVAC + Aero Engine)
-Q4a: Initial Evidence
-Q4b: Open — Architecture Defined, awaiting Marine data
-
-### Explicitly NOT Current Priorities
-- Further N-CMAPSS experiments
-- HI_v1 implementation
-- RUL prediction
-- Deep learning models
-
-### Next Priority
-P1: Marine data acquisition (teaching vessel)
-P2: Baseline Management validation with real data
-P3: Validation D (Marine generator)
+Use [manifest/machine_retrieval_manifest.json](manifest/machine_retrieval_manifest.json) for curated machine retrieval order. Do not treat generated transport or execution copies as scientific source authorities.

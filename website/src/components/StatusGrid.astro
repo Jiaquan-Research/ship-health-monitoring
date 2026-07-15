@@ -1,0 +1,20 @@
+---
+const statuses = [
+  ["Marine Package v1.0", "Complete and frozen"],
+  ["External Validation execution", "Not started"],
+  ["External reviewer", "Not selected"],
+  ["Deep Research Blind Review", "Not started"],
+  ["Marine data request", "Planned, not started"],
+  ["Marine validation", "Not started"],
+  ["Deployment readiness", "Not demonstrated"]
+];
+---
+
+<section class="grid" aria-label="Current status">
+  {statuses.map(([label, value]) => (
+    <div class="status-card span-4">
+      <h3>{label}</h3>
+      <span class="badge warn">{value}</span>
+    </div>
+  ))}
+</section>
